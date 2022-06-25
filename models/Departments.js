@@ -2,16 +2,12 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-// create our Employee model
-class Employee extends Model {
-    // set up method to run on instance data (per Employee) to check password
-    checkPassword(loginPw) {
-      return bcrypt.compareSync(loginPw, this.password);
-    }
-  }
+
+// create our Department model
+class Department extends Model {}
   
-  // create fields/columns for Employee model
-  Employee.init(
+  // create fields/columns for Department model
+  Department.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -19,57 +15,15 @@ class Employee extends Model {
         primaryKey: true,
         autoIncrement: true
       },
-      EmployeeFirstname: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      EmployeeLasttname: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      deptID: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'department',
-            key: 'id'
-          }
 
-      },
-      email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-        validate: {
-          isEmail: true
-        }
-      },
-      password: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [4]
-        }
-      }
-    },
-    {
-      hooks: {
-        // set up beforeCreate lifecycle "hook" functionality
-        async beforeCreate(newEmployeeData) {
-          newEmployeeData.password = await bcrypt.hash(newEmployeeData.password, 10);
-          return newEmployeeData;
-        },
-  
-        async beforeUpdate(updatedEmployeeData) {
-          updatedEmployeeData.password = await bcrypt.hash(updatedEmployeeData.password, 10);
-          return updatedEmployeeData;
-        }
-      },
+
+      
       sequelize,
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'Employee'
+      modelName: 'department'
     }
   );
   
-  module.exports = Employee;
+  module.exports = Department;
