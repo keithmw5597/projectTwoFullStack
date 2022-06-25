@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Directory</title>
+</head>
+<body>
+    <!--page information for the left column-->
+    <div id="left-nav">
+        <div id="userProfile">
+            <h2>Welcome,</h2>
+            <img src=""></img>
+            <h2 id="employeeName">Employee 1</h2>
+        </div>
+        <!--buttons for links to other pages-->
+        <div id="navButtons">
+            <button class="navBtn">Home</button>
+            <button class="navBtn">Employees</button>
+            <button class="navBtn">Department</button>
+        </div>
+        <!--buttons to edit/create/or remove content from the directory-->
+        <div id="pageButtons" class="btn">
+            <button class="pageBtn">Add Employees</button>
+            <button class="pageBtn">Edit Employees</button>
+            <button class="pageBtn" id="removeBtn">Remove Employees</button>
+        </div>
+    </div>
+    <!--page information for the right column-->
+    <div id="right-content">
+        <!--This remains the same in subpage, the path changes-->
+        <header>
+            <h1 id="companyName">Company name</h1>
+            <h3 id ="pagePath">Employee Directory</h3>
+        </header>
+        
+        <!--This is where the actual page content starts-->
+        <div id="page-content">
+            <!--input field to search for employee-->
+            <input id="search" placeholder="Search" type="input"></input>
+            <!--the start of the table for the directory-->
+            <div class="directory">
+                <!--the information for the first row differs between pages
+                Possibly change to fill in dynamically-->
+                <div class ="directoryHeader">
+                    <p id="filter-1" class="tableHeader">Full Name</p> <!--Change to id of filter1?-->
+                    <p id="filter-2" class="tableHeader">Work Email</p>
+                    <p id="filter-3" class="tableHeader">Department</p>
+                    <p id="filter-4" class="tableHeader">Start Date</p>
+                </div>
+                <!--information of each employee will get pulled from the server and displayed within here-->
+                <div class ="directoryResults">
+                    <!--each block of information for each employee-->
+                    <div class="result-block" id="index-1">
+                        <p id="name">Employee 1</p>
+                        <p id="email">Employee1.lastName@company.com</p>
+                        <p id="dept">Information Technology</p>
+                        <p id="start-date">6/24/24</p>
+                    </div>
+                    <div class="result-block" id="index-1">
+                        <p id="name">Employee 1</p>
+                        <p id="email">Employee1.lastName@company.com</p>
+                        <p id="dept">Information Technology</p>
+                        <p id="start-date">6/24/24</p>
+                    </div>
+                    <!--Future blocks to be added dynamically-->
+                    <div class="result-block" id="index-1">
+                        <p id="name"></p>
+                        <p id="email"></p>
+                        <p id="dept"></p>
+                        <p id="start-date"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
