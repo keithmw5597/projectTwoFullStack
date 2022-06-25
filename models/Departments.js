@@ -1,29 +1,27 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
+
 const sequelize = require('../config/connection');
 
-
 // create our Department model
-class Department extends Model {}
+class Departments extends Model {}
   
   // create fields/columns for Department model
-  Department.init(
-    {
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
-      },
-
-
-      
-      sequelize,
-      timestamps: false,
-      freezeTableName: true,
-      underscored: true,
-      modelName: 'department'
-    }
-  );
+  Departments.init({
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "departments",
+  });
   
-  module.exports = Department;
+  module.exports = Departments;

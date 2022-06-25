@@ -1,28 +1,45 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class Salary extends Model{}
 
 
 Salary.init(
- {
-     id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    primaryKey: true,
-    autoIncrement: true
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "employee",
+        key: "id",
+      },
+    },
+    salary: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+      validate: {
+        isDecimal: true,
+      },
+    },
+    department_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'department',
+        key: 'id'
+      },
+      validate: {
+        isNumeric: true,
+      },
+    },
   },
-},
- 
- 
- 
-    { 
-sequelize,
-timestamps: false,
-freezeTableName: true,
-underscored: true,
-modelName: 'salary'}
-)
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "salary",
+  }
+);
 
 module.exports= Salary
