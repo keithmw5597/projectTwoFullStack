@@ -5,6 +5,7 @@
     --pageBg: #F1F1F1;
     --darkGray: #C8CeC2;
     --lightGray: #EFEFED;
+    box-sizing:border-box;
 }
 
 .column {
@@ -26,14 +27,6 @@
     color: var(--darkGray);
 }
 
-.button {
-    border-radius: 7px;
-    width: 100%;
-    background-color: var(--accent);
-    color: var(--pageBg);
-    font-weight: 500;
-}
-
 #or p {
     justify-content: center;
     text-align: center;
@@ -42,4 +35,61 @@
 
 #view button {
     border-radius: 15px;
+}
+
+html{
+    height:100%;
+}
+
+body{
+    height:100%;
+    background-color: var(--pageBg);
+}
+
+#left-nav{
+    background: linear-gradient(45deg, var(--primaryTeal), var(--secondaryTeal));
+    max-height:100%;
+}
+
+#userProfile{
+    font-size:24px;
+    color:var(--lightGray);
+}
+.navButtons{
+    height:200px;
+}
+
+.pageButtons{
+    height:200px;
+}
+
+.button{
+    text-align:center;
+    color:var(--lightGray);
+    border:none;
+    border-radius:5px;
+    box-shadow: 3px 3px var(--primaryTeal);
+    font-size:18px;
+}
+
+.navBtn{
+    background-color:var(--secondaryTeal);
+}
+
+.pageBtn{
+    background-color:var(--accent);
+}
+
+#removeBtn{
+    background-color:var(--darkGray);
+    color:var(--primaryTeal);
+}
+
+.table thead{
+    background-color: var(--secondaryTeal);
+}
+
+.table thead td{
+    color:var(--lightGray);
+    background-color: var(--secondaryTeal);
 }

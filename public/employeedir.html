@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+
+<body class="columns i mobile">
+    <!--page information for the left column-->
+    <div id="left-nav" class="column">
+        <div class="container pl-2">
+            <div id="userProfile" class="columns is-multiline is-left pl-2">
+                <h4 class="profileText column is-10">Welcome,</h4>
+                <img class="profileText column is-10" src=""></img>
+                <h4 class="profile Text column is-10" id="employeeName">Employee 1</h4>
+            </div>
+            <!-- seperate the section between the profile and the buttons below-->
+            <div class="block">
+                <!--buttons for links to other pages-->
+                <div id="navButtons" class="columns is-multiline is-centered mb-6" >
+                    <a src="" class="button navBtn column is-9 mb-2">Home</a>
+                    <a src="" class="button navBtn column is-9 mb-2">Employees</a>
+                    <a src="" class="button navBtn column is-9">Department</a>
+                </div>
+
+                <!--buttons to edit/create/or remove content from the directory-->
+                <div id="pageButtons" class="columns is-multiline is-centered mt-6">
+                    <a src="" class="button pageBtn column is-9 mb-2">Add Employees</a>
+                    <!--*******************QUESTION***************************************-->
+                    <!--these aren't going to new pages, should they be buttons or inputs?-->
+                    <button class="button pageBtn column is-9 mb-2">Edit Employees</button>
+                    <button class="button pageBtn column is-9" id="removeBtn">Remove Employees</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--page information for the right column-->
+    <section id="right-content" class="column is-10">
+        <!--This remains the same in subpage, the path changes-->
+        <div class="block content">
+            <h1 id="companyName" class="title">Company name</h1>
+            <h3 id ="pagePath" class="subtitle">Employee Directory</h3>
+        </div>
+        
+        <!--This is where the actual page content starts-->
+        <div id="page-content" class="block container is-centered">
+            <!--input field to search for employee-->
+            <input id="search" placeholder="Search" type="input" class="mb-3"></input>
+            <!--the start of the table for the directory-->
+            <div class="table-container">
+                <table class ="table is-full-width">
+                    <thead>
+                        <tr>
+                            <th title="name">Full Name</th>
+                            <th title="email">Work Email</th>
+                            <th title="dept">Department</th>
+                            <th title="start-date">Start Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="index-1">
+                            <td id="name">Employee 1</td>
+                            <td id="email">Employee1.lastName@company.com</td>
+                            <td id="dept">Information Technology</td>
+                            <td id="start-date">6/24/24</td>
+                        </tr>
+                        <tr id="index-2">
+                            <td id="name">Employee 2</td>
+                            <td id="email">Employee2.lastName@company.com</td>
+                            <td id="dept">Information Technology</td>
+                            <td id="start-date">6/24/24</td>
+                        </tr>
+                        <tr id="index-3">
+                            <td id="name">Employee 2</td>
+                            <td id="email">Employee2.lastName@company.com</td>
+                            <td id="dept">Information Technology</td>
+                            <td id="start-date">6/24/24</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

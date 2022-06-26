@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body class="columns i mobile">
+    <!--page information for the left column-->
+    <div id="left-nav" class="column has-background-light">
+        <div id="userProfile" class="columns is-multiline is-left pl-2 content">
+            <h4 class="column is-10">Welcome,</h4>
+            <img class="column is-10" src=""></img>
+            <h4 class="column is-10" id="employeeName">Employee 1</h4>
+        </div>
+        <!-- seperate the section between the profile and the buttons below-->
+        <div class="block">
+            <!--buttons for links to other pages-->
+            <div id="navButtons" class="has-background-grey-light columns is-multiline is-centered mb-6 is-mobile" >
+                <a src="" class="button navBtn column is-10 mb-2">Home</a>
+                <a src="" class="button navBtn column is-10 mb-2">Employees</a>
+                <a src="" class="button navBtn column is-10">Department</a>
+            </div>
+
+            <!--buttons to edit/create/or remove content from the directory-->
+            <div id="pageButtons" class="has-background-grey-lighter columns is-multiline is-centered mt-6 is-mobile">
+                <a src="" class="button pageBtn column is-10 mb-2">Add Department</a>
+                <!--*******************QUESTION***************************************-->
+                <!--these aren't going to new pages, should they be buttons or inputs?-->
+                <button class="button pageBtn column is-10 mb-2">Edit Department</button>
+                <button class="button pageBtn column is-10" id="removeBtn">Remove Department</button>
+            </div>
+        </div>
+    </div>
+    <!--page information for the right column-->
+    <section id="right-content" class="column is-10">
+        <!--This remains the same in subpage, the path changes-->
+        <div class="block content">
+            <h1 id="companyName" class="title">Company name</h1>
+            <h3 id ="pagePath" class="subtitle">Department Directory</h3>
+        </div>
+        
+        <!--This is where the actual page content starts-->
+        <div id="page-content" class="block container">
+            <!--input field to search for employee-->
+            <input id="search" placeholder="Search" type="input" class="mb-3"></input>
+            <!--the start of the table for the directory-->
+            <div class="directory columns is-multiline is-centered has-background-primary-light">
+                <!--the information for the first row differs between pages
+                Possibly change to fill in dynamically-->
+                <div class = "column is-10 ">
+                    <div class ="directoryHeader level has-background-primary">
+                        <p id="filter-1" class="tableHeader level-item">Department</p> <!--Change to id of filter1?-->
+                        <p id="filter-4" class="tableHeader level-item">Supervisor</p>
+                    </div>
+                    <!--information of each employee will get pulled from the server and displayed within here-->
+                    <div class ="directoryResults column is-10 ">
+                        <!--each block of information for each employee-->
+                        <div class="result-block level" id="index-1">
+                            <p id="department" class="level-item">Department1</p>
+                            <p id="supervisor" class="level-item">Supervisor1.lastName@company.com</p>
+                        </div>
+                        <div class="result-block level" id="index-1">
+                            <p id="department" class="level-item">Department1</p>
+                            <p id="supervisor" class="level-item">Supervisor1.lastName@company.com</p>
+                        </div>
+                        <!--Future blocks to be added dynamically-->
+                        <div class="result-block level" id="index-1">
+                            <p id="department" class="level-item">Department1</p>
+                            <p id="supervisor" class="level-item">Supervisor1.lastName@company.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
