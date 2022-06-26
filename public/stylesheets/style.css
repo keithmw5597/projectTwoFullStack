@@ -5,6 +5,7 @@
     --pageBg: #F1F1F1;
     --darkGray: #C8CeC2;
     --lightGray: #EFEFED;
+
     box-sizing:border-box;
 }
 
@@ -64,3 +65,4 @@ body{
     color:var(--lightGray);
     background-color: var(--secondaryTeal);
 }
+
