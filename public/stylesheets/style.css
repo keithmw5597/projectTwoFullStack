@@ -5,4 +5,40 @@
     --pageBg: #F1F1F1;
     --darkGray: #C8CeC2;
     --lightGray: #EFEFED;
-} 
+}
+
+.column {
+    margin-top: 10%;
+}
+
+.welcome {
+    font-size: 3rem;
+}
+
+.card {
+    background-color: var(--lightGray);
+    border-radius: 15px;
+}
+
+.input {
+    border-radius: 7px;
+    background-color: rgba(249, 249, 249, 0.992);
+    color: var(--darkGray);
+}
+
+.button {
+    border-radius: 7px;
+    width: 100%;
+    margin: -5px;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+#or {
+    align-content: center;
+}
+
+#view button {
+    border-radius: 15px;
+}

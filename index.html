@@ -5,32 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="public\stylesheets\style.css">
     <title>LogIn</title>
 </head>
 <body>
-    <div>
-        
-    </div>
-    <section>
-        <h1>Log In Page</h1>
-        <form>
-                <h2>LogIn</h2>
-            <label for="username">Enter username:</label>
-            <input type="text" placeholder="Your Username" name="username" id="username" class="form-input"/>
-            <label for="password">Password:</label>
-            <input type="text" placeholder="Password" name="password" id="password" class="form-input"/>
-            <button type="submit">
-                Submit
-            </button>
-        </form>
-        <form>
-            <h2>Create Account</h2>
-            <label for="username">Enter a username:</label>
-            <input type="text" placeholder="Username" name="username" id="username" class="form-input"/>
-            <button type="submit">
-                Submit
-            </button>    
-        </form>
+    <section class="section mt-7 pt-7">
+        <div class="container mt-7 pt-7">
+            <div class="columns p-7">
+                <div class="column is-one-quarter m-5"></div>
+                <div class="column is-one-quarter"></div>
+                <div class="column p-6">
+                    <div class="card mt-7 p-6">
+                        <h2 class="welcome">Welcome</h2>
+                        <form class="field">
+                        <label class="label"></label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="username">
+                        </div>
+                        <label class="label"></label>
+                        <div>
+                            <input class="input" type="text" placeholder="Password">
+                        </div>
+                        <div class="control">
+                            <button class="button mt-2">Log In</button>
+                        </div>
+                    </form>
+                    <div class="section">
+                        <div class="container">
+                            <div class="columns">
+                                <div class="column"><hr/></div>
+                                <div class="column" id="or">
+                                    <p>or</p>
+                                </div>
+                                <div class="column"><hr/></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <form>
+                        <label class="label">Not Registered?</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Username">
+                        </div>
+                        <div class="control">
+                            <button class="button mt-2">Create Account</button>
+                        </div>    
+                    </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </section>
+
 </body>
 </html>
