@@ -7,11 +7,7 @@
     --lightGray: #EFEFED;
     box-sizing:border-box;
 }
-
-.column {
-    margin-top: 10%;
-}
-
+/* Keith's CSS
 .welcome {
     font-size: 3rem;
 }
@@ -36,60 +32,197 @@
 #view button {
     border-radius: 15px;
 }
+*/
+
 
 html{
     height:100%;
 }
 
-body{
+body#directoryPage{
     height:100%;
     background-color: var(--pageBg);
 }
 
+.maxHt{
+    height:100%;
+}
+
 #left-nav{
+    height:100%;
+    width:14%;
     background: linear-gradient(45deg, var(--primaryTeal), var(--secondaryTeal));
-    max-height:100%;
 }
 
-#userProfile{
-    font-size:24px;
+#userProfile {
     color:var(--lightGray);
-}
-.navButtons{
-    height:200px;
+    margin-bottom:0px;
 }
 
-.pageButtons{
-    height:200px;
+#profileImg{
+    padding:auto;
+    width:70%;
 }
 
-.button{
+#pageButtons .button{
+    overflow-wrap:break-word;
+    white-space:break-spaces;
+}
+
+#left-nav .button{
+    margin-bottom: 5px;
+    height: 48px;
     text-align:center;
     color:var(--lightGray);
     border:none;
     border-radius:5px;
     box-shadow: 3px 3px var(--primaryTeal);
-    font-size:18px;
+    line-height:18px;
 }
 
 .navBtn{
     background-color:var(--secondaryTeal);
+    width:100%;
 }
 
 .pageBtn{
     background-color:var(--accent);
+    width:100%;
 }
 
-#removeBtn{
+.pageBtn#removeBtn{
     background-color:var(--darkGray);
     color:var(--primaryTeal);
 }
 
-.table thead{
+.column#right-content{
+    padding:0px;
+}
+
+#companyName{
+    background-color:var(--pageBg);
+}
+
+#titleName{
+    color: var(--primaryTeal);
+    font-size: 30px;
+    font-weight:light;
+}
+
+#pagePath{
+    background-color:var(--darkGray);
+    font-size:18px;
+}
+
+#page-content{
+    align-items:center;
+}
+
+#searchBar{
+    height:30px;
+    width:20%;
+    border: 2px solid var(--secondaryTeal);
+    border-radius: 5px;
+    text-align:center;
+}
+/***START OF TABLE *****/
+.table-container{
+    width: 100%;
+    box-shadow: 7px 7px var(--accent);
+    border: 2px solid var(--secondaryTeal);
+    border-radius:10px;
+}
+
+.table-section{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#filterBy{
+    margin-bottom:10px; 
+    border:none;  
+    width:98.5%;
+    border-radius:10px;
     background-color: var(--secondaryTeal);
 }
 
-.table thead td{
+.table#filterBy th{
     color:var(--lightGray);
-    background-color: var(--secondaryTeal);
+    font-weight: bold;
+    text-align:center;
+    align-items:center;
+    vertical-align:middle;
+    border:none;
 }
+
+
+.table img{
+    height:20px;
+}
+
+#directory{
+    color:var(--primaryTeal);
+    width:100%;
+}
+
+.tableWrap{
+    height:400px;
+    max-height:500px;
+    overflow:auto;
+}
+
+.t-row{
+    height:40px;
+    border-bottom: 2px solid var(--secondaryTeal);
+}
+
+table#directory td{
+    text-align:center;
+}
+
+tbody{
+    width:100%;
+}
+tr#index-1{
+    width:100%;
+}
+
+
+#icon{
+    width: 10%;
+}
+
+#name{
+    width:20%;
+}
+
+td#name{
+    color:var(--accent);
+    width: 20%;
+}
+
+#email{
+    width: 35%;
+}
+
+#dept{
+    width: 25%;
+}
+
+#start-date{
+    width: 10%;
+}
+
+/***specifically for dept directory***/
+#deptIcon{
+    width: 10%;
+}
+
+#deptDir, #supEmail{
+    width:45%;
+}
+
+/***End dept directory****/
+
+/***END OF TABLE ***/

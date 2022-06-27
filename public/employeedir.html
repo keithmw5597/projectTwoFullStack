@@ -9,81 +9,177 @@
     <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 
-<body class="columns i mobile">
-    <!--page information for the left column-->
-    <div id="left-nav" class="column">
-        <div class="container pl-2">
-            <div id="userProfile" class="columns is-multiline is-left pl-2">
-                <h4 class="profileText column is-10">Welcome,</h4>
-                <img class="profileText column is-10" src=""></img>
-                <h4 class="profile Text column is-10" id="employeeName">Employee 1</h4>
-            </div>
-            <!-- seperate the section between the profile and the buttons below-->
-            <div class="block">
-                <!--buttons for links to other pages-->
-                <div id="navButtons" class="columns is-multiline is-centered mb-6" >
-                    <a src="" class="button navBtn column is-9 mb-2">Home</a>
-                    <a src="" class="button navBtn column is-9 mb-2">Employees</a>
-                    <a src="" class="button navBtn column is-9">Department</a>
+<body id="directoryPage">
+    <!--flex box to divide the left hand of the page and the right-->
+    <div class="maxHt is-flex flex-wrap is-flex-direction-row is-justify-content-center">
+        <!--Left column with navigation and action buttons-->
+        <div id="left-nav" class="p-4 is-flex is-flex-direction-column is-justify-content-space-between">
+            <!--seperate the profile with the first set of buttons to align them to the top-->
+            <div id="top-portion">
+                <div id="userProfile" class="pt-3 mb-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-space-around">
+                    <p class="is-size-5 profileText">Welcome,</p>
+                    <img id="profileImg" class="is-size-5 profileText mt-4 mb-4" src="./images/profileicon.png"></img>
+                    <p id="employeeName" class="is-size-5 profileText">Employee 1</p>
                 </div>
 
-                <!--buttons to edit/create/or remove content from the directory-->
-                <div id="pageButtons" class="columns is-multiline is-centered mt-6">
-                    <a src="" class="button pageBtn column is-9 mb-2">Add Employees</a>
-                    <!--*******************QUESTION***************************************-->
-                    <!--these aren't going to new pages, should they be buttons or inputs?-->
-                    <button class="button pageBtn column is-9 mb-2">Edit Employees</button>
-                    <button class="button pageBtn column is-9" id="removeBtn">Remove Employees</button>
+                <!--<div id="btnActions" class="is-flex is-flex-direction-column is-justify-content-space-between">-->
+                <div id="navButtons" class="is-flex is-flex-direction-column has-text-weight-medium">
+                    <!--buttons for links to other pages-->
+                    <a class="navBtn button is-size-6">Home</a>
+                    <a class="navBtn button is-size-6">Employees</a>
+                    <a class="navBtn button is-size-6">Department</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <!--page information for the right column-->
-    <section id="right-content" class="column is-10">
-        <!--This remains the same in subpage, the path changes-->
-        <div class="block content">
-            <h1 id="companyName" class="title">Company name</h1>
-            <h3 id ="pagePath" class="subtitle">Employee Directory</h3>
-        </div>
-        
-        <!--This is where the actual page content starts-->
-        <div id="page-content" class="block container is-centered">
-            <!--input field to search for employee-->
-            <input id="search" placeholder="Search" type="input" class="mb-3"></input>
-            <!--the start of the table for the directory-->
-            <div class="table-container">
-                <table class ="table is-full-width">
-                    <thead>
-                        <tr>
-                            <th title="name">Full Name</th>
-                            <th title="email">Work Email</th>
-                            <th title="dept">Department</th>
-                            <th title="start-date">Start Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr id="index-1">
-                            <td id="name">Employee 1</td>
-                            <td id="email">Employee1.lastName@company.com</td>
-                            <td id="dept">Information Technology</td>
-                            <td id="start-date">6/24/24</td>
-                        </tr>
-                        <tr id="index-2">
-                            <td id="name">Employee 2</td>
-                            <td id="email">Employee2.lastName@company.com</td>
-                            <td id="dept">Information Technology</td>
-                            <td id="start-date">6/24/24</td>
-                        </tr>
-                        <tr id="index-3">
-                            <td id="name">Employee 2</td>
-                            <td id="email">Employee2.lastName@company.com</td>
-                            <td id="dept">Information Technology</td>
-                            <td id="start-date">6/24/24</td>
-                        </tr>
-                    </tbody>
-                </table>
+
+            <!--this will align to the bottom-->
+            <div id="pageButtons" class="pb-3 is-flex is-flex-direction-column is-mobile has-text-weight-medium">
+                <!--buttons to edit/create/or remove content from the directory-->
+                <button class="pageBtn button is-size-6">Add Employees</button>
+                <!--*******************QUESTION***************************************-->
+                <!--these aren't going to new pages, should they be buttons or inputs?-->
+                <button class="pageBtn button is-size-6m">Edit Employees</button>
+                <button id="removeBtn" class="pageBtn button is-size-6">Remove Employees</button>
             </div>
         </div>
-    </section>
+
+        <!--page information for the right column-->
+        <div id="right-content" class="column">
+            <section id="companyName">
+                <p class="title pl-6 pt-3 pb-2" id="titleName">Company name</p>
+                <p id ="pagePath"class="subtitle py-3 pl-6">Employee Directory</p>
+            </section>
+
+            <section id="page-content">
+                <!--wrapped all the content in a container so would be able to center it-->
+                <div class="table-section">
+                    <input id="searchBar" placeholder="Search" class="my-3">
+                    
+                    <!--This table is the header, had to be seperated to add space between the header and the data-->
+                    <table id="filterBy" class="table">
+                        <thead class="dir">
+                            <tr>
+                                <th id="icon"><img src="images/profileicon.png" id="small_icon"></th>
+                                <th id="name">Full Name</th>
+                                <th id="email">Work Email</th>
+                                <th id="dept">Department</th>
+                                <th id="start-date">Start Date</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <!--This is the table holding all the information of the database-->
+                    <!--wrapped in a div so to apply a border around it-->
+                    <div class="table-container tableWrap">
+                        <table id="directory" class ="table">
+                            <tbody>
+                                <!--/////////////////////////////////////////////////////////////////-->
+                                <!--This information will be added dynamically, placeholders for now-->
+                                <tr id="index-1" class="t-row">
+                                    <td id="icon"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="name">Employee 1</td>
+                                    <td id="email">Employee1.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-2" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-3" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-3" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-3" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-3" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-3" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-3" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-3" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-3" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-3" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-3" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-3" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <tr id="index-3" class="t-row">
+                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
+                                    <td id="name">Employee 2</td>
+                                    <td id="email">Employee2.lastName@company.com</td>
+                                    <td id="dept">Information Technology</td>
+                                    <td id="start-date">6/24/24</td>
+                                </tr>
+                                <!--/////////???????????/END OF PLACEHOLDERS?????????????????////////-->
+                                <!--/////////////////////////////////////////////////////////////////-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 </body>
+
 </html>
