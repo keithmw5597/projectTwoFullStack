@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node models/index.js"
+    "start": "node models/index.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,9 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
+    "handlebars": "^4.7.7",
     "mysql2": "^2.3.3",
+    "nodemon": "^2.0.18",
     "sequelize": "^6.21.1"
   }
 }

@@ -17,11 +17,14 @@ class Departments extends Model {}
       type: DataTypes.STRING,
       allowNull: false,
     },
+  },
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "departments",
+    modelName: "departments"
+
   });
   
   module.exports = Departments;
