@@ -9,10 +9,8 @@ Salary.init(
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: "employee",
-        key: "id",
-      },
+      autoIncrement: true,
+      primaryKey: true
     },
     salary: {
       type: DataTypes.DECIMAL,
