@@ -29,11 +29,6 @@ class Employee extends Model {
       },
       deptID: {
         type: DataTypes.INTEGER,
-        references: {
-            model: 'department',
-            key: 'id'
-          }
-
       },
       email: {
         type: DataTypes.STRING,

@@ -3,7 +3,6 @@ const sequelize = require('../config/connection');
 
 class Salary extends Model{}
 
-
 Salary.init(
   {
     id: {
@@ -13,22 +12,15 @@ Salary.init(
       primaryKey: true
     },
     salary: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         isDecimal: true,
       },
     },
     department_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: true,
-      references: {
-        model: 'department',
-        key: 'id'
-      },
-      validate: {
-        isNumeric: true,
-      },
     },
   },
   {

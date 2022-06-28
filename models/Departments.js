@@ -17,6 +17,10 @@ class Departments extends Model {}
       type: DataTypes.STRING,
       allowNull: false,
     },
+    supervisor: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
@@ -24,7 +28,6 @@ class Departments extends Model {}
     freezeTableName: true,
     underscored: true,
     modelName: "departments"
-
   });
   
   module.exports = Departments;
