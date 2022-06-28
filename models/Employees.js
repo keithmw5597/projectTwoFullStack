@@ -17,15 +17,15 @@ class Employee extends Model {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
-        autoIncrement: true
+        autoIncrement: true,
       },
       EmployeeFirstname: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
-      EmployeeLasttname: {
+      EmployeeLastname: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
       deptID: {
         type: DataTypes.INTEGER,
@@ -35,35 +35,41 @@ class Employee extends Model {
         allowNull: false,
         unique: true,
         validate: {
-          isEmail: true
-        }
+          isEmail: true,
+        },
       },
       password: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          len: [4]
-        }
-      }
+          len: [4],
+        },
+      },
     },
     {
       hooks: {
         // set up beforeCreate lifecycle "hook" functionality
         async beforeCreate(newEmployeeData) {
-          newEmployeeData.password = await bcrypt.hash(newEmployeeData.password, 10);
+          newEmployeeData.password = await bcrypt.hash(
+            newEmployeeData.password,
+            10
+          );
           return newEmployeeData;
         },
-  
+
         async beforeUpdate(updatedEmployeeData) {
-          updatedEmployeeData.password = await bcrypt.hash(updatedEmployeeData.password, 10);
+          updatedEmployeeData.password = await bcrypt.hash(
+            updatedEmployeeData.password,
+            10
+          );
           return updatedEmployeeData;
-        }
+        },
       },
       sequelize,
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'employee'
+      modelName: "employee",
     }
   );
   
