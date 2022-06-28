@@ -212,24 +212,6 @@ body{
 }
 
 
-/* .navbar-item {
-    width: 15%;
-    text-align: left;
-    align-items: left;
-} */
-
-/* .navbar-item h1 {
-    text-align: left;
-    align-items: left;
-} */
-
-/* #welcome-text {
-    flex-direction: column;
-    width: 600px;
-    text-align: left;
-    align-items: left;
-} */
-
 #Employee-text {
     color: var(--accent);
 }
@@ -245,9 +227,6 @@ body{
     font-weight: 500;
 } 
 
-/* #homepageNav {
-    max-height: 300px;
-} */
 
 .spacer {
     background-color: var(--secondaryTeal);
@@ -273,4 +252,8 @@ body{
 
 #card-size {
     height: 100%;
+}
+
+#second-card {
+    margin-top: 2%;
 }
