@@ -17,9 +17,100 @@
     height: 100%;
 }
 
+#vcentered {
+    padding-bottom: none;
+    padding-top: 75px;
+    height: 800px;
+    padding-left: 75px;
+    padding-right: 65px;
+}
+
+
+#vcentered .card {
+    margin-top: 45px;
+
+}
+
+#vert-cent {
+    padding-bottom: none;
+    padding-top: 85px;
+    height: 800px;
+    padding-left: 75px;
+    padding-right: 65px;
+} 
+
+#signUpCard {
+    margin-top: 45px;
+}
+
+#columns {
+    height: 982px;
+}
+
+#button1 {
+    margin-top: 15%;
+    border-radius: 7px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+.or {
+    margin-top: 55px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primaryTeal);
+}
+
+.or::after,
+.or::before {
+    content: "";
+    display: block;
+    background-color: var(--primaryTeal);
+    width: 50%;
+    height: 1px;
+    margin: 0 10px;
+}
+
+.card h2 {
+    text-align: center;
+}
+
+#button2 {
+    border-radius: 7px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+#button3 {
+    border-radius: 7px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+#button4 {
+    border-radius: 7px;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+#button5 {
+    border-radius: 7px;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
 
 .welcome {
-    font-size: 3rem;    
+    font-size: 4rem;    
 }
 
 .card {
@@ -98,4 +189,88 @@ body{
 .table thead td{
     color:var(--lightGray);
     background-color: var(--secondaryTeal);
+}
+
+.nav {
+    display: flex;
+    background-color: var(--secondaryTeal);
+    overflow: hidden;
+    max-height: 30%;
+    min-height: 250px;
+}
+
+.profile-image {
+    margin-left: 35px;
+    padding: 10px;
+    min-width: 225px;
+    min-height: 225px;
+}
+
+.nav-img {
+     position: relative;
+     top: -70px;
+}
+
+
+/* .navbar-item {
+    width: 15%;
+    text-align: left;
+    align-items: left;
+} */
+
+/* .navbar-item h1 {
+    text-align: left;
+    align-items: left;
+} */
+
+/* #welcome-text {
+    flex-direction: column;
+    width: 600px;
+    text-align: left;
+    align-items: left;
+} */
+
+#Employee-text {
+    color: var(--accent);
+}
+
+#nav-button1 {
+    max-width: 160px;
+}
+
+#view {
+    border-radius: 7px;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+} 
+
+/* #homepageNav {
+    max-height: 300px;
+} */
+
+.spacer {
+    background-color: var(--secondaryTeal);
+    height: auto;
+    width: auto;
+    border-radius: 15px;
+}
+
+
+#lower-body {
+    
+    border-radius: 15px;
+    padding: 45px;
+    margin: 55px;
+    height: 100%;
+}
+
+#nav-img {
+    position: relative;
+    top: 30px;
+
+}
+
+#card-size {
+    height: 100%;
 }
