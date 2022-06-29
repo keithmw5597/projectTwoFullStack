@@ -6,7 +6,11 @@ router.get("/", (req, res) => {
   Departments.findAll({
     attributes: { exclude: ["password"] },
   })
-    .then((Department) => res.json(Department))
+    .then((Department) =>
+      res.render("homepage", {
+        Department,
+      })
+    )
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
