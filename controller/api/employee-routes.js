@@ -20,7 +20,6 @@ router.get('/', (req, res) => {
       EmployeeFirstname: req.body.EmployeeFirstname,
       EmployeeLastname: req.body.EmployeeLastname,
       deptID: req.body.deptID,
-      EmployeeFirstname: req.body.Employeesname,
       email: req.body.email,
       password: req.body.password,
     })
