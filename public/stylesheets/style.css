@@ -16,6 +16,25 @@
     width: 100%;
     height: 100%;
 }
+
+#button1 {
+    margin-top: 15%;
+    border-radius: 7px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+#button2 {
+    margin-top: 15%;
+    border-radius: 7px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
 .welcome {
     font-size: 3rem;
 }
