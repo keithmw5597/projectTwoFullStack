@@ -17,7 +17,7 @@
             <!--seperate the profile with the first set of buttons to align them to the top-->
             <div id="top-portion">
                 <div id="userProfile" class="pt-3 mb-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-space-around pb-0">
-                    <p class="is-size-5 profileText">Welcome,</p>
+                    <p class="is-size-4 profileText">Welcome,</p>
                     <img id="profileImg" class="is-size-5 profileText mt-4 mb-4 px-auto" src="./images/profileicon.png"></img>
                     <p id="employeeName" class="is-size-5 profileText">Employee 1</p>
                 </div>
@@ -25,18 +25,18 @@
                 <!--These buttons are links to other pages-->
                 <div id="navButtons" class="buttons has-text-weight-medium is-mobile mb-3">
                     <!--buttons for links to other pages-->
-                    <a src="homepage.html" class="navBtn button is-size-6 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth">Home</a>
-                    <a src="employeedir.html" class="navBtn button is-size-6 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth">Employees</a>
-                    <a src="departmentdir.html" class ="navBtn button is-size-6 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth">Department</a>
+                    <a href="./homepage.html" class="navBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-normal">Home</a>
+                    <a href="./employeedir.html" class="navBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-normal">Employees</a>
+                    <a href="./departmentdir.html" class ="navBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-normal">Department</a>
                 </div>
             </div>
 
             <!--this will align to the bottom, these buttons do something within the page-->
             <div id="pageButtons" class="buttons pb-3 is-mobile has-text-weight-medium">
                 <!--buttons to edit/create/or remove content from the directory-->
-                <button class="pageBtn button is-size-6 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth">Add Employees</button>
-                <button class="pageBtn button is-size-6 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth py-3">Edit Employees</button>
-                <button id="removeBtn" class="pageBtn button is-size-6 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth">Remove Employees</button>
+                <a href="./addemployee.html" class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-normal">Add employee</a>
+                <button class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-normal">Edit employee</button>
+                <button id="removeBtn" class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-normal">Remove employees</button>
             </div>
         </div>
 
@@ -75,7 +75,7 @@
                                 <tr id="index-1" class="t-row is-fullwidth">
                                     <td id="selectDirRow" class="has-text-centered"><input type="checkbox"></td>
                                     <td id="icon" class="has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="name" class="has-text-centered">Employee 1</td>
+                                    <td id="name" class="has-text-centered"><a src="">Employee 1</a></td>
                                     <td id="email"class="has-text-centered">Employee1.lastName@company.com</td>
                                     <td id="dept"class="has-text-centered">Information Technology</td>
                                     <td id="start-date"class="has-text-centered">6/24/24</td>
@@ -83,7 +83,7 @@
                                 <tr id="index-2" class="t-row is-fullwidth" >
                                     <td id="selectDirRow"class="has-text-centered"><input type="checkbox"></td>
                                     <td title="icon"class="has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="name" class="has-text-centered">Employee 2</td>
+                                    <td id="name" class="has-text-centered"><a src="">Employee 2</a></td>
                                     <td id="email" class="has-text-centered">Employee2.lastName@company.com</td>
                                     <td id="dept" class="has-text-centered">Information Technology</td>
                                     <td id="start-date" class="has-text-centered">6/24/24</td>
@@ -91,24 +91,24 @@
                                 <tr id="index-3" class="t-row is-fullwidth">
                                     <td id="selectDirRow" class="has-text-centered"><input type="checkbox"></td>
                                     <td id="icon" class="has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="name" class="has-text-centered">Employee 1</td>
-                                    <td id="email"class="has-text-centered">Employee1.lastName@company.com</td>
+                                        <td id="name" class="has-text-centered"><a src="">Employee 3</a></td>
+                                    <td id="email"class="has-text-centered">Employee3.lastName@company.com</td>
                                     <td id="dept"class="has-text-centered">Information Technology</td>
                                     <td id="start-date"class="has-text-centered">6/24/24</td>
                                 </tr>
                                 <tr id="index-4" class="t-row is-fullwidth">
                                     <td id="selectDirRow"class="has-text-centered"><input type="checkbox"></td>
                                     <td title="icon"class="has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="name" class="has-text-centered">Employee 2</td>
-                                    <td id="email" class="has-text-centered">Employee2.lastName@company.com</td>
+                                        <td id="name" class="has-text-centered"><a src="">Employee 4</a></td>
+                                    <td id="email" class="has-text-centered">Employee4.lastName@company.com</td>
                                     <td id="dept" class="has-text-centered">Information Technology</td>
                                     <td id="start-date" class="has-text-centered">6/24/24</td>
                                 </tr>
                                 <tr id="index-5" class="t-row is-fullwidth">
                                     <td id="selectDirRow"class="has-text-centered"><input type="checkbox"></td>
                                     <td title="icon"class="has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="name" class="has-text-centered">Employee 2</td>
-                                    <td id="email" class="has-text-centered">Employee2.lastName@company.com</td>
+                                        <td id="name" class="has-text-centered"><a src="">Employee 5</a></td>
+                                    <td id="email" class="has-text-centered">Employee5.lastName@company.com</td>
                                     <td id="dept" class="has-text-centered">Information Technology</td>
                                     <td id="start-date" class="has-text-centered">6/24/24</td>
                                 </tr>

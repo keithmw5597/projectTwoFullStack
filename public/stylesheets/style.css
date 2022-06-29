@@ -318,6 +318,10 @@ table#directory td{
 }
 
 /***specifically for dept directory***/
+#name a{
+    color:var(--accent);
+}
+
 #selectDirRow{
     width: 5%;
 }
