@@ -89,3 +89,139 @@ body{
     color:var(--lightGray);
     background-color: var(--secondaryTeal);
 }
+
+#titleName{
+    color: var(--primaryTeal);
+}
+
+#companyName{
+    color: var(--primaryTeal);
+}
+
+#pagePath{
+    background-color:var(--darkGray);
+}
+
+#profileBlock {
+    background-color: var(--secondaryTeal);
+    margin: 50px 30px 30px 40px;
+    border-radius: 15px;
+}
+
+#profileInfo {
+    background-color: var(--secondaryTeal);
+    border-radius: 30px;
+    padding: 12px;
+    margin: 0px 10px 0px 10px;
+}
+
+#blockHeader {
+    color: var(--lightGray);
+    background-color: var(--secondaryTeal);
+    margin-left: 7px;
+    text-align: justify;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#jobHeader {
+    color: var(--lightGray);
+    background-color: var(--secondaryTeal);
+    margin-left: 7px;
+    text-align: justify;
+    border-radius: 20px;
+    padding: 10px 0px 0px 70px;
+}
+
+#jobBlock {
+    background-color: var(--secondaryTeal);
+    margin-left: 250px;
+    border-radius: 25px;
+}
+
+#profileImg2 {
+    padding: 60px;
+    margin-left: 16px;
+    background-color: var(--secondaryTeal);
+
+}
+
+#imgHolder {
+    background-color: var(--secondaryTeal);
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+#employeeHolder {
+    background-color: var(--secondaryTeal);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    margin-top: -30px;
+}
+
+#employeeName2 {
+    color: var(--lightGray);
+    background-color: var(--secondaryTeal);
+    text-align: left;
+    margin: auto;
+    align-self: flex-start;   
+}
+
+#workInfo{
+    color: var(--lightGray);
+    background-color: var(--secondaryTeal);
+    align-items:flex-start;
+    margin-left: 300px;
+    margin-top: -30px;
+
+}
+
+#workBlock{
+    margin: 0px 0px 0px 0px;
+}
+
+#emailData {
+    color: var(--lightGray);
+    padding: 0px;
+    margin-top: -15px;
+}
+
+#phoneInfo {
+    color: var(--lightGray);
+    background-color: var(--secondaryTeal);
+    align-items:flex-start;
+    margin-top: 0px;
+    margin-left: 300px;
+}
+
+#phoneData {
+    color: var(--lightGray);
+    padding: 0px;
+    margin-top: -15px;
+    margin-left: 320px;
+}
+
+#idInfo{
+    color: var(--lightGray);
+    background-color: var(--secondaryTeal);
+    align-items:flex-start;
+    margin-top: 5px;
+    margin-left: 305px;
+}
+
+#idData{
+    color: var(--lightGray);
+    padding: 0px;
+    margin-top: -15px;
+    margin-left: 335px;
+}
+
+#jobHolder{
+    margin-top: -160px;
+}
+
+#employeeBlock{
+    padding: 30px 0px 0px 0px;
+}
+
+
