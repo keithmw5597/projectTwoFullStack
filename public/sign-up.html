@@ -9,85 +9,88 @@
     <title>Sign up</title>
 </head>
 <body>
-    <h1>Sign up page</h1>
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-one-quarter"></div>
-                <div class="column is-one-quarter"></div>
-                <div class="column p-6">
-                    <div class="card mt-7 p-6">
-                        <h2 class="logIn">Log-In Information</h2>
-                        <form class="field">
-                            <label class="label"></label>
-                            <div class="control">
-                                <input type="text" class="input" placeholder="username/email">
-                            </div>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="password">
-                            </div>
-                        
-                        <h2 class="persnoal-information">Personal Information</h2>
-                        <section class="section">
-                            <div class="container">
-                                <div class="columns">
-                                    <div class="column">
+    <div class="bg-log-in">
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-one-quarter"></div>
+                    <div class="column is-one-quarter"></div>
+                    <div class="column mt-7 pt-6 pb-1" id="vert-cent">
+                        <div class="card mt-7 p-6" id="signUpCard">
+                            <h2 class="logIn">Log-In Information</h2>
+                            <form class="field">
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input type="text" class="input" placeholder="username/email">
+                                </div>
+                                <div class="control mt-2">
+                                    <input class="input" type="text" placeholder="password">
+                                </div>
+                            
+                            <h2 class="persnoal-information">Personal Information</h2>
+                            <section class="section p-1">
+                                <div class="container">
+                                    <div class="columns p-1">
+                                        <div class="column p-1">
+                                            <label class="label"></label>
+                                            <div class="control">
+                                                <input type="text" class="input" placeholder="First name">
+                                            </div>            
+                                        </div>
+                                        <div class="column p-1">
+                                            <label class="label"></label>
+                                            <div class="control">
+                                                <input type="text" class="input" placeholder="Last name">
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="columns p-1">
+                                    <div class="column p-1">
                                         <label class="label"></label>
                                         <div class="control">
-                                            <input type="text" class="input" placeholder="First name">
-                                        </div>            
+                                            <input type="text" class="input" placeholder="Phone number">
+                                        </div> 
                                     </div>
-                                    <div class="column">
+                                    <div class="column p-1">
                                         <label class="label"></label>
                                         <div class="control">
-                                            <input type="text" class="input" placeholder="Last name">
+                                            <input type="text" class="input" placeholder="Date of Birth">
                                         </div>
                                     </div>
-                            </div>
-                            <div class="columns">
-                                <div class="column">
-                                    <label class="label"></label>
-                                    <div class="control">
-                                        <input type="text" class="input" placeholder="Phone number">
-                                    </div> 
                                 </div>
-                                <div class="column">
-                                    <label class="label"></label>
-                                    <div class="control">
-                                        <input type="text" class="input" placeholder="Date of Birth">
-                                    </div>
+                            </section>
+                            <h2>Employee Information</h2>
+                            <section class="section p-1">
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Your role with the company">
                                 </div>
-                            </div>
-                        </section>
-                        <h2>Employee Information</h2>
-                        <section class="section">
-                            <label class="label"></label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="Your role with the company">
-                            </div>
-                            <label class="label"></label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="Department">
-                            </div>
-                            <label class="label"></label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="Employee ID">
-                            </div>
-                            <label class="label"></label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="Manager">
-                            </div>
-                            <div class="control">
-                                <button class="button m-2">Continue</button>
-                            </div>
-                        </section>
-      
-                    </div>
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Department">
+                                </div>
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Employee ID">
+                                </div>
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Manager">
+                                </div>
+                                <div class="control">
+                                    <button class="button mt-2" id="button3">Continue</button>
+                                </div>
+                            </section>
+                        </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+    
+      
+
 
 </body>
 </html>
