@@ -9,43 +9,43 @@
     <title>LogIn</title>
 </head>
 <body>
-    <section class="section mt-7 pt-7">
-        <div class="container mt-7 pt-7">
-            <div class="columns p-7">
-                <div class="column is-one-quarter m-5"></div>
-                <div class="column is-one-quarter"></div>
-                <div class="column mt-6 p-6">
-                    <div class="card mt-7 p-6">
-                        <h2 class="welcome">Welcome</h2>
-                        <form class="field">
-                        <label class="label"></label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="username">
+    <div class="bg-log-in mt-7">
+        <section class="section mt-7 pt-8 pb-1 pl-6 pr-6">
+            <div></div>
+            <div class="container mt-7 pt-7">
+                <div class="columns p-7">
+                    <div class="column is-one-quarter m-5"></div>
+                    <div class="column is-one-quarter"></div>
+                    <div class="column mt-6 pt-6 pb-1" id="vcentered">
+                        <div class="card mt-7 pt-6 p-6">
+                            <h2 class="welcome">Welcome</h2>
+                            <form class="field">
+                            <label class="label"></label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="username or email address">
+                            </div>
+                            <label class="label"></label>
+                            <div>
+                                <input class="input" type="text" placeholder="Password">
+                            </div>
+                            <div class="control">
+                                <button class="button mt-2" id="button1">Log In</button>
+                            </div>
+                        </form>
+                        <div class="or">OR</div>
+                        <form>
+                            <label class="label">Not Registered?</label>
+
+                            <div class="control">
+                                <button class="button mt-2" id="button2">Create Account</button>
+                            </div>    
+                        </form>
                         </div>
-                        <label class="label"></label>
-                        <div>
-                            <input class="input" type="text" placeholder="Password">
-                        </div>
-                        <div class="control">
-                            <button class="button mt-2">Log In</button>
-                        </div>
-                    </form>
-                    <div class="is-divider" data-content="OR"></div>
-                    <form>
-                        <label class="label">Not Registered?</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Username">
-                        </div>
-                        <div class="control">
-                            <button class="button mt-2">Create Account</button>
-                        </div>    
-                    </form>
+                        
                     </div>
-                    
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    </div>
 </body>
 </html>
