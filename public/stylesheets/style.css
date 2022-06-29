@@ -56,11 +56,9 @@ body#directoryPage{
 
 #userProfile {
     color:var(--lightGray);
-    margin-bottom:0px;
 }
 
 #profileImg{
-    padding:auto;
     width:70%;
 }
 
@@ -70,52 +68,32 @@ body#directoryPage{
 }
 
 #left-nav .button{
-    margin-bottom: 5px;
-    height: 48px;
-    text-align:center;
-    color:var(--lightGray);
+    line-height:18px;
     border:none;
     border-radius:5px;
+    color:var(--lightGray);
     box-shadow: 3px 3px var(--primaryTeal);
-    line-height:18px;
 }
 
 .navBtn{
     background-color:var(--secondaryTeal);
-    width:100%;
 }
 
 .pageBtn{
     background-color:var(--accent);
-    width:100%;
 }
 
 .pageBtn#removeBtn{
     background-color:var(--darkGray);
     color:var(--primaryTeal);
-}
-
-.column#right-content{
-    padding:0px;
-}
-
-#companyName{
-    background-color:var(--pageBg);
-}
+} 
 
 #titleName{
     color: var(--primaryTeal);
-    font-size: 30px;
-    font-weight:light;
 }
 
 #pagePath{
     background-color:var(--darkGray);
-    font-size:18px;
-}
-
-#page-content{
-    align-items:center;
 }
 
 #searchBar{
@@ -123,11 +101,10 @@ body#directoryPage{
     width:20%;
     border: 2px solid var(--secondaryTeal);
     border-radius: 5px;
-    text-align:center;
 }
+
 /***START OF TABLE *****/
 .table-container{
-    width: 100%;
     box-shadow: 7px 7px var(--accent);
     border: 2px solid var(--secondaryTeal);
     border-radius:10px;
@@ -135,12 +112,9 @@ body#directoryPage{
 
 .table-section{
     width:90%;
-    margin-left:auto;
-    margin-right:auto;
 }
 
 #filterBy{
-    margin-bottom:10px; 
     border:none;  
     width:98.5%;
     border-radius:10px;
@@ -149,9 +123,6 @@ body#directoryPage{
 
 .table#filterBy th{
     color:var(--lightGray);
-    font-weight: bold;
-    text-align:center;
-    align-items:center;
     vertical-align:middle;
     border:none;
 }
@@ -159,16 +130,15 @@ body#directoryPage{
 
 .table img{
     height:20px;
+    width:20px;
 }
 
 #directory{
     color:var(--primaryTeal);
-    width:100%;
 }
 
 .tableWrap{
-    height:400px;
-    max-height:500px;
+    max-height:400px;
     overflow:auto;
 }
 
@@ -178,51 +148,20 @@ body#directoryPage{
 }
 
 table#directory td{
-    text-align:center;
-}
-
-tbody{
-    width:100%;
-}
-tr#index-1{
-    width:100%;
-}
-
-
-#icon{
-    width: 10%;
-}
-
-#name{
-    width:20%;
-}
-
-td#name{
-    color:var(--accent);
-    width: 20%;
-}
-
-#email{
-    width: 35%;
-}
-
-#dept{
-    width: 25%;
-}
-
-#start-date{
-    width: 10%;
+    vertical-align:middle;
 }
 
 /***specifically for dept directory***/
+#selectDirRow{
+    width: 5%;
+}
 #deptIcon{
-    width: 10%;
+    width: 15%;
 }
 
 #deptDir, #supEmail{
-    width:45%;
+    width:40%;
 }
-
 /***End dept directory****/
 
 /***END OF TABLE ***/

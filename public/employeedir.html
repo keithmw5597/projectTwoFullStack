@@ -16,160 +16,101 @@
         <div id="left-nav" class="p-4 is-flex is-flex-direction-column is-justify-content-space-between">
             <!--seperate the profile with the first set of buttons to align them to the top-->
             <div id="top-portion">
-                <div id="userProfile" class="pt-3 mb-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-space-around">
+                <div id="userProfile" class="pt-3 mb-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-space-around pb-0">
                     <p class="is-size-5 profileText">Welcome,</p>
-                    <img id="profileImg" class="is-size-5 profileText mt-4 mb-4" src="./images/profileicon.png"></img>
+                    <img id="profileImg" class="is-size-5 profileText mt-4 mb-4 px-auto" src="./images/profileicon.png"></img>
                     <p id="employeeName" class="is-size-5 profileText">Employee 1</p>
                 </div>
 
-                <!--<div id="btnActions" class="is-flex is-flex-direction-column is-justify-content-space-between">-->
-                <div id="navButtons" class="is-flex is-flex-direction-column has-text-weight-medium">
+                <!--These buttons are links to other pages-->
+                <div id="navButtons" class="buttons has-text-weight-medium is-mobile mb-3">
                     <!--buttons for links to other pages-->
-                    <a src="homepage.html" class="navBtn button is-size-6">Home</a>
-                    <a src="employeedir.html" class="navBtn button is-size-6">Employees</a>
-                    <a src="departmentdir.html" class ="navBtn button is-size-6">Department</a>
+                    <a src="homepage.html" class="navBtn button is-size-6 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth">Home</a>
+                    <a src="employeedir.html" class="navBtn button is-size-6 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth">Employees</a>
+                    <a src="departmentdir.html" class ="navBtn button is-size-6 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth">Department</a>
                 </div>
             </div>
 
-            <!--this will align to the bottom-->
-            <div id="pageButtons" class="pb-3 is-flex is-flex-direction-column is-mobile has-text-weight-medium">
+            <!--this will align to the bottom, these buttons do something within the page-->
+            <div id="pageButtons" class="buttons pb-3 is-mobile has-text-weight-medium">
                 <!--buttons to edit/create/or remove content from the directory-->
-                <button class="pageBtn button is-size-6">Add Employees</button>
-                <!--*******************QUESTION***************************************-->
-                <!--these aren't going to new pages, should they be buttons or inputs?-->
-                <button class="pageBtn button is-size-6m">Edit Employees</button>
-                <button id="removeBtn" class="pageBtn button is-size-6">Remove Employees</button>
+                <button class="pageBtn button is-size-6 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth">Add Employees</button>
+                <button class="pageBtn button is-size-6 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth py-3">Edit Employees</button>
+                <button id="removeBtn" class="pageBtn button is-size-6 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth">Remove Employees</button>
             </div>
         </div>
 
         <!--page information for the right column-->
-        <div id="right-content" class="column">
+        <div id="right-content" class="column p-0">
+            <!--information located on top of page, company name and page path-->
             <section id="companyName">
-                <p class="title pl-6 pt-3 pb-2" id="titleName">Company name</p>
-                <p id ="pagePath"class="subtitle py-3 pl-6">Employee Directory</p>
+                <p id="titleName" class="title pl-6 pt-3 pb-2 is-size-3 has-text-weight-normal">Company name</p>
+                <p id ="pagePath"class="subtitle py-3 pl-6 is-size-6">Employee Directory</p>
             </section>
-
-            <section id="page-content">
+            <!--the part of the page where the content differs. -->
+            <section id="page-content" class = "container">
                 <!--wrapped all the content in a container so would be able to center it-->
-                <div class="table-section">
-                    <input id="searchBar" placeholder="Search" class="my-3">
-                    
+                <div class="table-section mx-auto">
+                    <input id="searchBar" placeholder="Search" class="my-3 has-text-centered">
                     <!--This table is the header, had to be seperated to add space between the header and the data-->
-                    <table id="filterBy" class="table">
+                    <table id="filterBy" class="table mb-2 is-fullwidth">
                         <thead class="dir">
                             <tr>
-                                <th id="icon"><img src="images/profileicon.png" id="small_icon"></th>
-                                <th id="name">Full Name</th>
-                                <th id="email">Work Email</th>
-                                <th id="dept">Department</th>
-                                <th id="start-date">Start Date</th>
+                                <th id="selectDirRow" class="has-text-weight-bold has-text-centered"><input type="checkbox" disabled></th>
+                                <th id="icon" class="has-text-weight-bold has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
+                                <th id="name" class="has-text-weight-bold has-text-centered">Full Name</th>
+                                <th id="email" class="has-text-weight-bold has-text-centered">Work Email</th>
+                                <th id="dept" class="has-text-weight-bold has-text-centered ">Department</th>
+                                <th id="start-date" class="has-text-weight-bold has-text-centered">Start Date</th>
                             </tr>
                         </thead>
                     </table>
                     <!--This is the table holding all the information of the database-->
                     <!--wrapped in a div so to apply a border around it-->
-                    <div class="table-container tableWrap">
-                        <table id="directory" class ="table">
-                            <tbody>
+                    <div class="table-container tableWrap is-fullwidth">
+                        <table id="directory" class ="table is-fullwidth is-hoverable">
+                            <tbody class="is-fullwidth">
                                 <!--/////////////////////////////////////////////////////////////////-->
                                 <!--This information will be added dynamically, placeholders for now-->
-                                <tr id="index-1" class="t-row">
-                                    <td id="icon"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="name">Employee 1</td>
-                                    <td id="email">Employee1.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
+                                <tr id="index-1" class="t-row is-fullwidth">
+                                    <td id="selectDirRow" class="has-text-centered"><input type="checkbox"></td>
+                                    <td id="icon" class="has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="name" class="has-text-centered">Employee 1</td>
+                                    <td id="email"class="has-text-centered">Employee1.lastName@company.com</td>
+                                    <td id="dept"class="has-text-centered">Information Technology</td>
+                                    <td id="start-date"class="has-text-centered">6/24/24</td>
                                 </tr>
-                                <tr id="index-2" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
+                                <tr id="index-2" class="t-row is-fullwidth" >
+                                    <td id="selectDirRow"class="has-text-centered"><input type="checkbox"></td>
+                                    <td title="icon"class="has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="name" class="has-text-centered">Employee 2</td>
+                                    <td id="email" class="has-text-centered">Employee2.lastName@company.com</td>
+                                    <td id="dept" class="has-text-centered">Information Technology</td>
+                                    <td id="start-date" class="has-text-centered">6/24/24</td>
                                 </tr>
-                                <tr id="index-3" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
+                                <tr id="index-3" class="t-row is-fullwidth">
+                                    <td id="selectDirRow" class="has-text-centered"><input type="checkbox"></td>
+                                    <td id="icon" class="has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="name" class="has-text-centered">Employee 1</td>
+                                    <td id="email"class="has-text-centered">Employee1.lastName@company.com</td>
+                                    <td id="dept"class="has-text-centered">Information Technology</td>
+                                    <td id="start-date"class="has-text-centered">6/24/24</td>
                                 </tr>
-                                <tr id="index-3" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
+                                <tr id="index-4" class="t-row is-fullwidth">
+                                    <td id="selectDirRow"class="has-text-centered"><input type="checkbox"></td>
+                                    <td title="icon"class="has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="name" class="has-text-centered">Employee 2</td>
+                                    <td id="email" class="has-text-centered">Employee2.lastName@company.com</td>
+                                    <td id="dept" class="has-text-centered">Information Technology</td>
+                                    <td id="start-date" class="has-text-centered">6/24/24</td>
                                 </tr>
-                                <tr id="index-3" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
-                                </tr>
-                                <tr id="index-3" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
-                                </tr>
-                                <tr id="index-3" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
-                                </tr>
-                                <tr id="index-3" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
-                                </tr>
-                                <tr id="index-3" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
-                                </tr>
-                                <tr id="index-3" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
-                                </tr>
-                                <tr id="index-3" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
-                                </tr>
-                                <tr id="index-3" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
-                                </tr>
-                                <tr id="index-3" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
-                                </tr>
-                                <tr id="index-3" class="t-row">
-                                    <td title="icon"><img src="images/profileicon.png" id="small_icon" class="py-auto"></th>
-                                    <td id="name">Employee 2</td>
-                                    <td id="email">Employee2.lastName@company.com</td>
-                                    <td id="dept">Information Technology</td>
-                                    <td id="start-date">6/24/24</td>
+                                <tr id="index-5" class="t-row is-fullwidth">
+                                    <td id="selectDirRow"class="has-text-centered"><input type="checkbox"></td>
+                                    <td title="icon"class="has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="name" class="has-text-centered">Employee 2</td>
+                                    <td id="email" class="has-text-centered">Employee2.lastName@company.com</td>
+                                    <td id="dept" class="has-text-centered">Information Technology</td>
+                                    <td id="start-date" class="has-text-centered">6/24/24</td>
                                 </tr>
                                 <!--/////////???????????/END OF PLACEHOLDERS?????????????????////////-->
                                 <!--/////////////////////////////////////////////////////////////////-->
