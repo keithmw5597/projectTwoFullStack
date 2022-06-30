@@ -1,5 +1,6 @@
 // import all models
 const Departments = require('./Departments');
+const User = require('./User')
 // const Employees = require('./Employees'); // with the s on the end or not ??? might run into a problem 
 // const Salary = require('./Salary');
 
@@ -22,8 +23,7 @@ const Departments = require('./Departments');
 // //   onDelete: "SET NULL",
 // // });
 
-// // module.exports = {
-// //   Departments,
-// //   Employees,
-// //   Salary,
-// // };
+module.exports = {
+  Departments,
+  User
+};
