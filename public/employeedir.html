@@ -129,16 +129,6 @@
                                         <td id="dept"class="has-text-centered">Information Technology</td>
                                         <td id="start-date"class="has-text-centered">6/24/24</td>
                                     </tr>
-                                    <tr id="index-2" class="t-row is-fullwidth" >
-                                        <td id="selectDirRow"class="has-text-centered"><input type="checkbox"></td>
-                                        <td title="icon"class="has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
-                                        <td id="name" class="has-text-centered"><a src="">Employee 2</a></td>
-                                        <td id="email" class="has-text-centered">Employee2.lastName@company.com</td>
-                                        <td id="dept" class="has-text-centered">Information Technology</td>
-                                        <td id="start-date" class="has-text-centered">6/24/24</td>
-                                    </tr>
-                                    <!--/////////???????????/END OF PLACEHOLDERS?????????????????////////-->
-                                    <!--/////////////////////////////////////////////////////////////////-->
                                 </tbody>
                             </table>
                         </div>
@@ -148,29 +138,7 @@
             </div>
         </div>
     </div>
-
-    <!--script for menu-->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Get all "navbar-burger" elements
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-            // Add a click event on each of them
-            $navbarBurgers.forEach( el => {
-                el.addEventListener('click', () => {
-
-                // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
-                const $target = document.getElementById(target);
-
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
-
-                });
-            });
-        });
-    </script>
+    <script src="./js/navbardropdown.js"></script>
 </body>
 
 </html>

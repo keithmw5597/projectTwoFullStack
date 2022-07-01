@@ -124,44 +124,6 @@
                                     <td id="deptDir">Department1</td>
                                     <td id="supEmail">Supervisor1.lastName@company.com</td>
                                 </tr>
-                                <tr id="index-2" class="t-row is-fullwidth">
-                                    <td id="selectDirRow"><input type="checkbox"></td>
-                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="deptDir">Department2</td>
-                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
-                                </tr>
-                                <tr id="index-3" class="t-row is-fullwidth">
-                                    <td id="selectDirRow"><input type="checkbox"></td>
-                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="deptDir">Department3</td>
-                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
-                                </tr>
-                                <tr id="index-4" class="t-row is-fullwidth">
-                                    <td id="selectDirRow"><input type="checkbox"></td>
-                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="deptDir">Department4</td>
-                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
-                                </tr>
-                                <tr id="index-5" class="t-row is-fullwidth">
-                                    <td id="selectDirRow"><input type="checkbox"></td>
-                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="deptDir">Department5</td>
-                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
-                                </tr>
-                                <tr id="index-6" class="t-row is-fullwidth">
-                                    <td id="selectDirRow"><input type="checkbox"></td>
-                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="deptDir">Department6</td>
-                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
-                                </tr>
-                                <tr id="index-7" class="t-row is-fullwidth">
-                                    <td id="selectDirRow"><input type="checkbox"></td>
-                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="deptDir">Department7</td>
-                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
-                                </tr>
-                                <!--/////////???????????/END OF PLACEHOLDERS?????????????????////////-->
-                                <!--/////////////////////////////////////////////////////////////////-->
                             </tbody>
                         </table>
                     </div>
@@ -170,28 +132,7 @@
         </div>
     </div>
 
-    <!--script for menu-->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Get all "navbar-burger" elements
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-            // Add a click event on each of them
-            $navbarBurgers.forEach( el => {
-                el.addEventListener('click', () => {
-
-                // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
-                const $target = document.getElementById(target);
-
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
-
-                });
-            });
-        });
-    </script>
+    <script src="./js/navbardropdown.js"></script>
 </body>
 
 </html>
