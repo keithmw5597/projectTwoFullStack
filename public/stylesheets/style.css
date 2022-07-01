@@ -6,6 +6,8 @@
     --darkGray: #C8CeC2;
     --lightGray: #EFEFED;
     box-sizing:border-box;
+
+
 }
 
 .bg-log-in {
@@ -239,7 +241,7 @@ body{
 #lower-body {
     
     border-radius: 15px;
-    padding: 45px;
+    padding: 1px;
     margin: 55px;
     height: 100%;
 }
