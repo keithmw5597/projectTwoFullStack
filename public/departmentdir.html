@@ -4,78 +4,194 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Employee Directory</title>
+    <title>Department Directory</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 
-<body class="columns i mobile">
-    <!--page information for the left column-->
-    <div id="left-nav" class="column has-background-light">
-        <div id="userProfile" class="columns is-multiline is-left pl-2 content">
-            <h4 class="column is-10">Welcome,</h4>
-            <img class="column is-10" src=""></img>
-            <h4 class="column is-10" id="employeeName">Employee 1</h4>
-        </div>
-        <!-- seperate the section between the profile and the buttons below-->
-        <div class="block">
-            <!--buttons for links to other pages-->
-            <div id="navButtons" class="has-background-grey-light columns is-multiline is-centered mb-6 is-mobile" >
-                <a src="" class="button navBtn column is-10 mb-2">Home</a>
-                <a src="" class="button navBtn column is-10 mb-2">Employees</a>
-                <a src="" class="button navBtn column is-10">Department</a>
-            </div>
+<body id="directoryPage" class="maxHt">
+    <div class="maxHt columns is-tablet is-centered p-0">
+        <!--Left column with navigation and action buttons, only appears on desktops on left side-->
+        <div id="left-nav" class="column is-2 is-hidden-touch">
+            <div class="maxHt p-4 is-flex is-flex-direction-column is-justify-content-space-between">
+                <!--seperate the profile with the first set of buttons to align them to the top-->
+                <div id="top-portion">
+                    <div id="userProfile" class="pt-3 mb-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-space-around pb-0">
+                        <p class="is-size-4 profileText">Welcome,</p>
+                        <img id="profileImg" class="is-size-5 profileText mt-4 mb-4 px-auto" src="./images/profileicon.png"></img>
+                        <p id="employeeName" class="is-size-5 profileText">Employee 1</p>
+                    </div>
 
-            <!--buttons to edit/create/or remove content from the directory-->
-            <div id="pageButtons" class="has-background-grey-lighter columns is-multiline is-centered mt-6 is-mobile">
-                <a src="" class="button pageBtn column is-10 mb-2">Add Department</a>
-                <!--*******************QUESTION***************************************-->
-                <!--these aren't going to new pages, should they be buttons or inputs?-->
-                <button class="button pageBtn column is-10 mb-2">Edit Department</button>
-                <button class="button pageBtn column is-10" id="removeBtn">Remove Department</button>
-            </div>
-        </div>
-    </div>
-    <!--page information for the right column-->
-    <section id="right-content" class="column is-10">
-        <!--This remains the same in subpage, the path changes-->
-        <div class="block content">
-            <h1 id="companyName" class="title">Company name</h1>
-            <h3 id ="pagePath" class="subtitle">Department Directory</h3>
-        </div>
-        
-        <!--This is where the actual page content starts-->
-        <div id="page-content" class="block container">
-            <!--input field to search for employee-->
-            <input id="search" placeholder="Search" type="input" class="mb-3"></input>
-            <!--the start of the table for the directory-->
-            <div class="directory columns is-multiline is-centered has-background-primary-light">
-                <!--the information for the first row differs between pages
-                Possibly change to fill in dynamically-->
-                <div class = "column is-10 ">
-                    <div class ="directoryHeader level has-background-primary">
-                        <p id="filter-1" class="tableHeader level-item">Department</p> <!--Change to id of filter1?-->
-                        <p id="filter-4" class="tableHeader level-item">Supervisor</p>
+                    <!--These buttons are links to other pages-->
+                    <div id="navButtons" class="buttons has-text-weight-medium is-mobile mb-3">
+                        <!--buttons for links to other pages-->
+                        <a href="./homepage.html" class="navBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium">Home</a>
+                        <a href="./employeedir.html" class="navBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium">Employees</a>
+                        <a href="./departmentdir.html" class ="navBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium">Department</a>
                     </div>
-                    <!--information of each employee will get pulled from the server and displayed within here-->
-                    <div class ="directoryResults column is-10 ">
-                        <!--each block of information for each employee-->
-                        <div class="result-block level" id="index-1">
-                            <p id="department" class="level-item">Department1</p>
-                            <p id="supervisor" class="level-item">Supervisor1.lastName@company.com</p>
-                        </div>
-                        <div class="result-block level" id="index-1">
-                            <p id="department" class="level-item">Department1</p>
-                            <p id="supervisor" class="level-item">Supervisor1.lastName@company.com</p>
-                        </div>
-                        <!--Future blocks to be added dynamically-->
-                        <div class="result-block level" id="index-1">
-                            <p id="department" class="level-item">Department1</p>
-                            <p id="supervisor" class="level-item">Supervisor1.lastName@company.com</p>
-                        </div>
-                    </div>
+                </div>
+                <!--this will align to the bottom, these buttons do something within the page-->
+                <div id="pageButtons" class="buttons pb-3 is-mobile has-text-weight-medium">
+                    <!--buttons to edit/create/or remove content from the directory-->
+                    <a href="./addemployee.html" class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Add employee</a>
+                    <button class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Edit employee</button>
+                    <button id="removeBtn" class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Remove employees</button>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!--page information for the right column-->
+        <div id="right-content" class="maxHt column is-full-mobile mx-0 p-0">
+            <div class="is-fullwidth">
+                <!-- Only appears on mobile views-->
+                <section id="top-nav" class="is-hidden-desktop is-mobile">
+                    <!--Hamburger menu for mobile-->
+                    <nav id="top-nav" class="is-hidden-desktop navbar px-4" role="navigation" aria-label="main navigation">
+                        <div class="navbar-brand mt-3 ">
+                            <a class="navbar-item" href="https://bulma.io">
+                                <div id="userProfile" class="is-flex">
+                                    <p class="is-size-4 profileText mr-2">Welcome,</p>
+                                    <p id="employeeName" class="is-size-4 profileText">Employee 1</p>
+                                </div>
+                            </a>
+                            <a role="button" class="navbar-burger mobile-nav" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true"></span>
+                            </a>
+                        </div>
+                      
+                        <div id="navbarBasicExample" class="navbar-menu mobile-nav"id ="" >
+                            <div class="navbar-end">
+                              <a class="navbar-item" href="./homepage.html">Homepage</a>
+                        
+                              <a class="navbar-item" href="./employeedir.html">Employee Directory</a>
+                  
+                              <a class="navbar-item" href="./departmentdir.html">Department Directory</a>
+                            </div>
+                        </div>
+                    </nav>
+                </section>
+
+                <!--information located on top of page, company name and page path-->
+                <section id="companyName" class="pt-2">
+                    <p id="titleName" class="title pl-6 pt-3 pb-2 is-size-3 has-text-weight-normal">Company name</p>
+                    <p id ="pagePath"class="subtitle py-1 pl-6 is-size-6">Department Directory</p>
+                </section>
+
+            <!--the part of the page where the content differs. -->
+            <section id="page-content" class = "pr-3">  
+                <!--wrapped all the content in a container so would be able to center it-->
+                <div class="table-section mx-auto pb-6">
+                    <div class="columns mx-0 mt-2 is-multiline is-mobile">
+                        <!--Search input-->
+                        <div class="column is-narrow p-0  my-1 mr-2">
+                            <input id="searchBar" placeholder="Search" class="has-text-centered">
+                        </div>
+                        <!--buttons for actions will appear besides the search input in mobile-->
+                        <div id="pageButtons" class="field is-grouped column p-0  my-1 is-hidden-desktop is-mobile has-text-right">
+                            <!--buttons to edit/create/or remove content from the directory-->
+                            <a href="./addemployee.html" class="pageBtnM my-0 py-2 button has-text-centered is-responsive has-text-weight-normal ">Add employee</a>
+                            <button class="pageBtnM button has-text-centered my-0 py-2 is-responsive has-text-weight-normal">Edit employee</button>
+                            <button id="removeBtn" class="pageBtnM button my-0 py-2 has-text-centered is-responsive has-text-weight-normal ">Remove employees</button>
+                        </div>
+                    </div>
+                    
+                    <!--This table is the header, had to be seperated to add space between the header and the data-->
+                    <div class="tableWrap is-fullwidth">
+                        <table id="filterBy" class="table mb-2 is-fullwidth">
+                            <thead class="dir is-fullwidth">
+                                <tr>
+                                    <th id="selectDirRow" class="has-text-weight-bold has-text-centered"><input type="checkbox" disabled></td>
+                                    <th id="deptIcon" class="has-text-weight-bold has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <th id="deptDir" class="has-text-weight-bold has-text-centered">Department"</th>
+                                    <th id="supEmail" class="has-text-weight-bold has-text-centered">Supervisor</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+                    <!--This is the table holding all the information of the database-->
+                    <!--wrapped in a div so to apply a border around it-->
+                    <div class="table-container tableWrap is-fullwidth">
+                        <table id="directory" class ="table is-fullwidth is-hoverable is-narrow">
+                            <tbody class="is-fullwidth">
+                                <!--/////////////////////////////////////////////////////////////////-->
+                                <!--This information will be added dynamically, placeholders for now-->
+                                <tr id="index-1" class="t-row is-fullwidth">
+                                    <td id="selectDirRow"><input type="checkbox"></td>
+                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="deptDir">Department1</td>
+                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
+                                </tr>
+                                <tr id="index-2" class="t-row is-fullwidth">
+                                    <td id="selectDirRow"><input type="checkbox"></td>
+                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="deptDir">Department2</td>
+                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
+                                </tr>
+                                <tr id="index-3" class="t-row is-fullwidth">
+                                    <td id="selectDirRow"><input type="checkbox"></td>
+                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="deptDir">Department3</td>
+                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
+                                </tr>
+                                <tr id="index-4" class="t-row is-fullwidth">
+                                    <td id="selectDirRow"><input type="checkbox"></td>
+                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="deptDir">Department4</td>
+                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
+                                </tr>
+                                <tr id="index-5" class="t-row is-fullwidth">
+                                    <td id="selectDirRow"><input type="checkbox"></td>
+                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="deptDir">Department5</td>
+                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
+                                </tr>
+                                <tr id="index-6" class="t-row is-fullwidth">
+                                    <td id="selectDirRow"><input type="checkbox"></td>
+                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="deptDir">Department6</td>
+                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
+                                </tr>
+                                <tr id="index-7" class="t-row is-fullwidth">
+                                    <td id="selectDirRow"><input type="checkbox"></td>
+                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
+                                    <td id="deptDir">Department7</td>
+                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
+                                </tr>
+                                <!--/////////???????????/END OF PLACEHOLDERS?????????????????////////-->
+                                <!--/////////////////////////////////////////////////////////////////-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!--script for menu-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach( el => {
+                el.addEventListener('click', () => {
+
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
