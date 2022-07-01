@@ -1,15 +1,120 @@
 :root{
     --primaryTeal: #375760;
     --secondaryTeal: #5c8E8D;
+    --secondaryTealTransparent: rgba(92,142,141, .8);
     --accent:#CC9466;
     --pageBg: #F1F1F1;
     --darkGray: #C8CeC2;
     --lightGray: #EFEFED;
     box-sizing:border-box;
+
+
+}
+
+/*****************Start of Valerie's CSS for directory pages**********/
+.bg-log-in {
+    background-image: url('../images/signInPagebg_Sign Up Page.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#vcentered {
+    padding-bottom: none;
+    padding-top: 75px;
+    height: 800px;
+    padding-left: 75px;
+    padding-right: 65px;
+}
+
+
+#vcentered .card {
+    margin-top: 45px;
+
+}
+
+#vert-cent {
+    padding-bottom: none;
+    padding-top: 85px;
+    height: 800px;
+    padding-left: 75px;
+    padding-right: 65px;
+} 
+
+#signUpCard {
+    margin-top: 45px;
+}
+
+#columns {
+    height: 982px;
+}
+
+#button1 {
+    margin-top: 15%;
+    border-radius: 7px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+.or {
+    margin-top: 55px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primaryTeal);
+}
+
+.or::after,
+.or::before {
+    content: "";
+    display: block;
+    background-color: var(--primaryTeal);
+    width: 50%;
+    height: 1px;
+    margin: 0 10px;
+}
+
+.card h2 {
+    text-align: center;
+}
+
+#button2 {
+    border-radius: 7px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+#button3 {
+    border-radius: 7px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+#button4 {
+    border-radius: 7px;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+#button5 {
+    border-radius: 7px;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
 }
 
 .welcome {
-    font-size: 3rem;
+    font-size: 4rem;    
 }
 
 .card {
@@ -37,57 +142,251 @@ html{
     height:100%;
 }
 
-body{
+.maxHt{
     height:100%;
-    background-color: var(--pageBg);
 }
 
 #left-nav{
     background: linear-gradient(45deg, var(--primaryTeal), var(--secondaryTeal));
-    max-height:100%;
 }
 
-#userProfile{
-    font-size:24px;
+#top-nav{
+    background: linear-gradient(-90deg, var(--primaryTeal), var(--secondaryTeal));
+}
+
+#right-content{
+    background-color: var(--pageBg);
+}
+
+#userProfile {
     color:var(--lightGray);
 }
-.navButtons{
-    height:200px;
+
+#profileImg{
+    width:70%;
 }
 
-.pageButtons{
-    height:200px;
+#pageButtons .button{
+    overflow-wrap:break-word;
+    white-space:break-spaces;
+    line-height:12px;
+    font-size: 12px;
 }
 
-.button{
-    text-align:center;
-    color:var(--lightGray);
+#left-nav .button{
+    line-height:12px;
     border:none;
     border-radius:5px;
+    color:var(--lightGray);
     box-shadow: 3px 3px var(--primaryTeal);
-    font-size:18px;
 }
 
 .navBtn{
-    background-color:var(--secondaryTeal);
+    background-color: var(--secondaryTeal);
+}
+
+.mobile-nav .navbar-item {
+    color: var(--lightGray);
+}
+
+.mobile-nav.navbar-burger{
+    color:var(--lightGray);
 }
 
 .pageBtn{
     background-color:var(--accent);
 }
 
-#removeBtn{
+.pageBtn#removeBtn{
     background-color:var(--darkGray);
+    color:var(--primaryTeal);
+} 
+
+.pageBtnM{
+    color: var(--lightGray);
+    background-color:var(--secondaryTeal);
+}
+
+.pageBtnM#removeBtn{
+    color: var(--lightGray);
+    background-color:var(--accent);
+}
+
+#titleName{
+    color: var(--primaryTeal);
+}
+
+#pagePath{
+    background-color:var(--darkGray);
+}
+
+#searchBar{
+    height:30px;
+    border: 2px solid var(--secondaryTeal);
+    border-radius: 5px;
+}
+
+/***START OF TABLE *****/
+.table-container{
+    box-shadow: 7px 7px var(--accent);
+    border: 2px solid var(--secondaryTeal);
+    border-radius:10px;
+}
+
+.table-section{
+    width:90%;
+}
+
+.mobilePageSection{
+    width:90%;
+}
+
+#filterBy{
+    border:none;  
+    border-radius:10px;
+    background-color: var(--secondaryTeal);
+}
+
+.table#filterBy th{
+    color:var(--lightGray);
+    vertical-align:middle;
+    border:none;
+}
+
+.table img{
+    height:20px;
+    width:20px;
+}
+
+#directory{
     color:var(--primaryTeal);
 }
 
-.table thead{
-    background-color: var(--secondaryTeal);
+.tableWrap{
+    max-height:400px;
+    overflow:auto;
+    border-radius:10px;
 }
 
-.table thead td{
-    color:var(--lightGray);
+.t-row{
+    height:40px;
+    border-bottom: 2px solid var(--secondaryTeal);
+}
+
+table#directory td{
+    vertical-align:middle;
+}
+/***specifically for dept directory***/
+#name a{
+    color:var(--accent);
+}
+
+#selectDirRow{
+    width: 5%;
+}
+#deptIcon{
+    width: 15%;
+}
+
+#deptDir, #supEmail{
+    width:40%;
+}
+
+@media screen and (max-width: 1023px){
+    .navbar-menu.mobile-nav{
+        background-color:var(--secondaryTealTransparent); 
+        color: var(--lightGray);
+    }
+}
+/***END OF TABLE ***/
+/************ END of Valerie's CSS for directory pages
+
+
+//***START of CSS changes for add employee page*****/
+#addEmployee{
+    border: 2px solid var(--secondaryTeal);
+    box-shadow: 15px 15px var(--accent);
+}
+
+.input.info{
+    border: 2px solid var(--secondaryTeal);
+    line-height:8px;
+    color: var(--primaryTeal);
+    height: 36px;
+}
+
+#continue{
+    background-color: var(--lightGray);
+    color: var(--primaryTeal);
+    border: 3px solid var(--accent); 
+    border-radius: 7px;
+}
+/******End of CSS for Add employee Page******/
+.nav {
+    display: flex;
     background-color: var(--secondaryTeal);
+    overflow: hidden;
+    max-height: 30%;
+    min-height: 250px;
+}
+
+.profile-image {
+    margin-left: 35px;
+    padding: 10px;
+    min-width: 225px;
+    min-height: 225px;
+}
+
+.nav-img {
+     position: relative;
+     top: -70px;
+}
+
+
+#Employee-text {
+    color: var(--accent);
+}
+
+#nav-button1 {
+    max-width: 160px;
+}
+
+#view {
+    border-radius: 7px;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+} 
+
+
+.spacer {
+    background-color: var(--secondaryTeal);
+    height: auto;
+    width: auto;
+    border-radius: 15px;
+}
+
+
+#lower-body {
+    
+    border-radius: 15px;
+    padding: 1px;
+    margin: 55px;
+    height: 100%;
+}
+
+#nav-img {
+    position: relative;
+    top: 30px;
+
+}
+
+#card-size {
+    height: 100%;
+}
+
+#second-card {
+    margin-top: 2%;
 }
 
 #titleName{
@@ -275,3 +574,4 @@ body{
     margin-left: 130px;
     margin-top: -50px;
 }
+
