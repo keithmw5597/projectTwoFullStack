@@ -1,16 +1,20 @@
 const router = require('express').Router();
 const Employees  = require("../../models/Employees");
 
-router.get('/', (req, res) => {
-    Employees.findAll({
-      attributes: { exclude: ["password"] },
-    })
-      .then((dbEmployeesData) => res.json(dbEmployeesData))
-      .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  });
+router.get("/", (req, res) => {
+  Employees.findAll({
+    attributes: { exclude: ["password"] },
+  })
+    .then((Employee) =>
+      res.render("employeedir", {
+        Employee,
+      })
+    )
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 
   router.post('/add', (req, res) => {

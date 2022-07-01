@@ -6,7 +6,11 @@ router.get("/", (req, res) => {
   Salary.findAll({
     attributes: { exclude: ["password"] },
   })
-    .then((Salary) => res.json(Salary))
+    .then((Salarys) =>
+      res.render("departmentdir", {
+        Salarys,
+      })
+    )
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
