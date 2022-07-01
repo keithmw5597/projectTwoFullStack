@@ -322,11 +322,11 @@ table#directory td{
     border-radius: 7px;
 }
 /******End of CSS for Add employee Page******/
-.nav {
+#home-nav {
     display: flex;
     background-color: var(--secondaryTeal);
     overflow: hidden;
-    max-height: 30%;
+    max-height: 250px;
     min-height: 250px;
 }
 
