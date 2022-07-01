@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
     attributes: { exclude: ["password"] },
   })
     .then((Salarys) =>
-      res.render("departmentdir", {
+      res.render("salary", {
         Salarys,
       })
     )

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Company Name</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body id="profilePage">
+    
+    <div class="maxHt is-flex flex-wrap is-flex-direction-row is-justify-content-center">
+        <div id="left-nav" class="p-4 is-flex is-flex-direction-column is-justify-content-space-between">
+            <div id="top-portion">
+                <div id="userProfile" class="pt-3 mb-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-space-around">
+                    <p class="is-size-5 profileText">Welcome,</p>
+                    <img id="profileImg" class="is-size-5 profileText mt-4 mb-4" src="./images/profileicon.png"></img>
+                    <p id="employeeName" class="is-size-5 profileText">Employee Name</p>
+                </div>
+
+                
+                <div id="navButtons" class="is-flex is-flex-direction-column has-text-weight-medium">
+                    <!--buttons for page navigation-->
+                    <a src="homepage.html" class="navBtn button is-size-6">Home</a>
+                    <a src="employeedir.html" class="navBtn button is-size-6">Employees</a>
+                    <a src="departmentdir.html" class ="navBtn button is-size-6">Department</a>
+                </div>
+            </div>
+
+            
+            <div id="pageButtons" class="pb-3 is-flex is-flex-direction-column is-mobile has-text-weight-medium">
+                <!--buttons for page customization-->
+                <button class="pageBtn button is-size-6">Add Employees</button>
+                <button class="pageBtn button is-size-6m">Edit Employees</button>
+                <button id="removeBtn" class="pageBtn button is-size-6">Remove Employees</button>
+            </div>
+        </div>
+
+        <!--employee profile information-->
+        <section id="right-content" class="column is-10">
+            <!--This remains the same in subpage, the path changes-->
+            <div class="block content">
+                <h1 id="companyName" class="title">Company name</h1>
+                <h3 id ="pagePath" class="subtitle">Employee Directory > Profile</h3>
+            </div>
+
+        <div id="profileHolder">
+            <div id="profileBlock" class="container is-parent">
+                <div id="profileInfo" class="columns is-parent is-8">
+                    <h2 id="blockHeader" class="columns is-8 title is-2">Personal Information</h2></div>
+                    <div id="imgHolder" class="column is-4 is-flex">
+                    <img id="profileImg2" class="column is-8 inline-flex is-left" src="./images/profileicon.png"></img>
+                    <h2 id="employeeName2" class="column is-6 has-text-left is-size-4 is-narrow">Employee 1<br>
+                        Last Name</h2>
+                        <div id="workBlock" class="container is-parent">
+                        <div id="workInfo" class="column is-6 is-flex is-offset-1 is-right is-gapless is-0">Work Email:</div>
+                           <h2 id="emailData" class="column is-8 is-offset-7 is-flex is-gapless is-0">employee1lastname@company.com</h2>
+                           <div id="phoneInfo" class="column is-6 is-offset-1 is-flex is-right is-gapless is-0">Phone Number:</div>
+                           <h2 id="phoneData" class="column is-8 is-offset-10 is-flex is-gapless is-0">(512)xxx-xxxx</h2>
+                           <div id="idInfo" class="column is-6 is-flex is-offset-1 is-right is-gapless is-0">Employee ID:</div>
+                           <h2 id="idData" class="column is-8 is-offset-10 is-flex is-gapless is-0">xxxxxxx</h2>
+                                    </div>                           
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+             </div>
+        </div>
+
+        <div id="jobHolder">
+            <div id="jobBlock" class="container is-parent">
+                <div id="jobInfo" class="columns is-parent is-8">
+                    <h2 id="jobHeader" class="column is-8 title is-2">Employee Information</h2></div>
+                    <div id="employeeHolder" class="columns is-4 is-flex">
+                        <div id="employeeBlock" class="container is-parent">
+                        <div id="roleInfo" class="column is-3 is-flex is-gapless is-0">Role at Company:</div>
+                        <div id="roleData" class="column is-3 is-flex is-gapless is-0">Web Developer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   
+        </div>
+    </div>
+</body>
+
+</html>
