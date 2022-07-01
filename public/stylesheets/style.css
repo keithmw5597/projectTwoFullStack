@@ -7,9 +7,137 @@
     --darkGray: #C8CeC2;
     --lightGray: #EFEFED;
     box-sizing:border-box;
+
+
 }
 
 /*****************Start of Valerie's CSS for directory pages**********/
+.bg-log-in {
+    background-image: url('../images/signInPagebg_Sign Up Page.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#vcentered {
+    padding-bottom: none;
+    padding-top: 75px;
+    height: 800px;
+    padding-left: 75px;
+    padding-right: 65px;
+}
+
+
+#vcentered .card {
+    margin-top: 45px;
+
+}
+
+#vert-cent {
+    padding-bottom: none;
+    padding-top: 85px;
+    height: 800px;
+    padding-left: 75px;
+    padding-right: 65px;
+} 
+
+#signUpCard {
+    margin-top: 45px;
+}
+
+#columns {
+    height: 982px;
+}
+
+#button1 {
+    margin-top: 15%;
+    border-radius: 7px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+.or {
+    margin-top: 55px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primaryTeal);
+}
+
+.or::after,
+.or::before {
+    content: "";
+    display: block;
+    background-color: var(--primaryTeal);
+    width: 50%;
+    height: 1px;
+    margin: 0 10px;
+}
+
+.card h2 {
+    text-align: center;
+}
+
+#button2 {
+    border-radius: 7px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+#button3 {
+    border-radius: 7px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+#button4 {
+    border-radius: 7px;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+#button5 {
+    border-radius: 7px;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+}
+
+.welcome {
+    font-size: 4rem;    
+}
+
+.card {
+    background-color: var(--lightGray);
+    border-radius: 15px;
+}
+
+.input {
+    border-radius: 7px;
+    background-color: rgba(249, 249, 249, 0.992);
+    color: var(--darkGray);
+}
+
+#or p {
+    justify-content: center;
+    text-align: center;
+}
+
+
+#view button {
+    border-radius: 15px;
+}
+
 html{
     height:100%;
 }
@@ -194,3 +322,69 @@ table#directory td{
     border-radius: 7px;
 }
 /******End of CSS for Add employee Page******/
+.nav {
+    display: flex;
+    background-color: var(--secondaryTeal);
+    overflow: hidden;
+    max-height: 30%;
+    min-height: 250px;
+}
+
+.profile-image {
+    margin-left: 35px;
+    padding: 10px;
+    min-width: 225px;
+    min-height: 225px;
+}
+
+.nav-img {
+     position: relative;
+     top: -70px;
+}
+
+
+#Employee-text {
+    color: var(--accent);
+}
+
+#nav-button1 {
+    max-width: 160px;
+}
+
+#view {
+    border-radius: 7px;
+    background-color: var(--accent);
+    color: var(--pageBg);
+    font-weight: 500;
+} 
+
+
+.spacer {
+    background-color: var(--secondaryTeal);
+    height: auto;
+    width: auto;
+    border-radius: 15px;
+}
+
+
+#lower-body {
+    
+    border-radius: 15px;
+    padding: 1px;
+    margin: 55px;
+    height: 100%;
+}
+
+#nav-img {
+    position: relative;
+    top: 30px;
+
+}
+
+#card-size {
+    height: 100%;
+}
+
+#second-card {
+    margin-top: 2%;
+}
