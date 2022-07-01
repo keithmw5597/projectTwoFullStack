@@ -406,14 +406,12 @@ table#directory td{
     margin: 50px 30px 30px 40px;
     border-radius: 15px;
 }
-
 #profileInfo {
     background-color: var(--secondaryTeal);
     border-radius: 30px;
     padding: 12px;
     margin: 0px 10px 0px 10px;
 }
-
 #blockHeader {
     color: var(--lightGray);
     background-color: var(--secondaryTeal);
@@ -422,7 +420,6 @@ table#directory td{
     border-radius: 10px;
     padding: 10px;
 }
-
 #jobHeader {
     color: var(--accent);
     background-color: var(--lightGray);
@@ -432,31 +429,26 @@ table#directory td{
     border-radius: 15px;
     padding: 10px;
 }
-
 #jobBlock {
     background-color: var(--lightGray);
     margin-left: 255px;
     margin-right: 15px;
+    margin-top: -20px;
     border-radius: 10px;
 }
-
 #jobInfo{
     margin-right: 20px;
 }
-
 #profileImg2 {
     padding: 60px;
     margin-left: 16px;
     background-color: var(--secondaryTeal);
-
 }
-
 #imgHolder {
     background-color: var(--secondaryTeal);
     border-radius: 10px;
     margin-bottom: 25px;
 }
-
 #employeeHolder {
     background-color: var(--lightGray);
     border-radius: 20px;
@@ -466,7 +458,6 @@ table#directory td{
     margin-right: 20px;
     padding: 0px 20px 0px 20px;
 }
-
 #employeeName2 {
     color: var(--lightGray);
     background-color: var(--secondaryTeal);
@@ -474,26 +465,21 @@ table#directory td{
     margin: auto;
     align-self: flex-start;   
 }
-
 #workInfo{
     color: var(--lightGray);
     background-color: var(--secondaryTeal);
     align-items:flex-start;
     margin-left: 300px;
     margin-top: -30px;
-
 }
-
 #workBlock{
     margin: 0px 0px 0px 0px;
 }
-
 #emailData {
     color: var(--lightGray);
     padding: 0px;
     margin-top: -15px;
 }
-
 #phoneInfo {
     color: var(--lightGray);
     background-color: var(--secondaryTeal);
@@ -501,14 +487,12 @@ table#directory td{
     margin-top: 0px;
     margin-left: 300px;
 }
-
 #phoneData {
     color: var(--lightGray);
     padding: 0px;
     margin-top: -15px;
     margin-left: 320px;
 }
-
 #idInfo{
     color: var(--lightGray);
     background-color: var(--secondaryTeal);
@@ -516,62 +500,55 @@ table#directory td{
     margin-top: 5px;
     margin-left: 305px;
 }
-
 #idData{
     color: var(--lightGray);
     padding: 0px;
     margin-top: -15px;
     margin-left: 335px;
 }
-
 #jobHolder{
-    margin-top: -50px;
+    margin-top: -160px;
 }
-
 #employeeBlock{
     background-color: var(--lightGray);
     padding: 30px 0px 0px 30px;
     margin-right: 20px;
     margin-top: 10px;
 }
-
 #roleInfo{
     padding: 0px 0px 20px 0px;
     margin-left: -45px;
 }
-
 #roleData{
-    margin-top:-55px;
+    margin-top:-80px;
     margin-left: 130px;
 }
-
 #deptInfo{
     margin-left: -55px;
     margin-top: -10px;
 }
-
 #deptData{
     margin-left: 130px;
     margin-top: -50px;
 }
-
 #managerInfo{
     margin-left: -55px;
     margin-top: -10px;
 }
-
 #managerData{
     margin-left: 130px;
-    margin-top: -48px;
+    margin-top: -70px;
 }
-
 #salaryInfo{
     margin-left: -55px;
     margin-top: -10px;
 }
-
 #salaryData{
     margin-left: 130px;
     margin-top: -50px;
 }
 
+#idImg{
+    margin-right: 80px;
+    margin-left: -25px;
+}
