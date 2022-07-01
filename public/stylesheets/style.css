@@ -1,120 +1,15 @@
 :root{
     --primaryTeal: #375760;
     --secondaryTeal: #5c8E8D;
-    --secondaryTealTransparent: rgba(92,142,141, .8);
     --accent:#CC9466;
     --pageBg: #F1F1F1;
     --darkGray: #C8CeC2;
     --lightGray: #EFEFED;
     box-sizing:border-box;
-
-
-}
-
-/*****************Start of Valerie's CSS for directory pages**********/
-.bg-log-in {
-    background-image: url('../images/signInPagebg_Sign Up Page.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
-#vcentered {
-    padding-bottom: none;
-    padding-top: 75px;
-    height: 800px;
-    padding-left: 75px;
-    padding-right: 65px;
-}
-
-
-#vcentered .card {
-    margin-top: 45px;
-
-}
-
-#vert-cent {
-    padding-bottom: none;
-    padding-top: 85px;
-    height: 800px;
-    padding-left: 75px;
-    padding-right: 65px;
-} 
-
-#signUpCard {
-    margin-top: 45px;
-}
-
-#columns {
-    height: 982px;
-}
-
-#button1 {
-    margin-top: 15%;
-    border-radius: 7px;
-    width: 100%;
-    background-color: var(--accent);
-    color: var(--pageBg);
-    font-weight: 500;
-}
-
-.or {
-    margin-top: 55px;
-    margin-bottom: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--primaryTeal);
-}
-
-.or::after,
-.or::before {
-    content: "";
-    display: block;
-    background-color: var(--primaryTeal);
-    width: 50%;
-    height: 1px;
-    margin: 0 10px;
-}
-
-.card h2 {
-    text-align: center;
-}
-
-#button2 {
-    border-radius: 7px;
-    width: 100%;
-    background-color: var(--accent);
-    color: var(--pageBg);
-    font-weight: 500;
-}
-
-#button3 {
-    border-radius: 7px;
-    width: 100%;
-    background-color: var(--accent);
-    color: var(--pageBg);
-    font-weight: 500;
-}
-
-#button4 {
-    border-radius: 7px;
-    background-color: var(--accent);
-    color: var(--pageBg);
-    font-weight: 500;
-}
-
-#button5 {
-    border-radius: 7px;
-    background-color: var(--accent);
-    color: var(--pageBg);
-    font-weight: 500;
 }
 
 .welcome {
-    font-size: 4rem;    
+    font-size: 3rem;
 }
 
 .card {
@@ -142,77 +37,64 @@ html{
     height:100%;
 }
 
-.maxHt{
+body{
     height:100%;
+    background-color: var(--pageBg);
 }
 
 #left-nav{
     background: linear-gradient(45deg, var(--primaryTeal), var(--secondaryTeal));
+    max-height:100%;
 }
 
-#top-nav{
-    background: linear-gradient(-90deg, var(--primaryTeal), var(--secondaryTeal));
-}
-
-#right-content{
-    background-color: var(--pageBg);
-}
-
-#userProfile {
+#userProfile{
+    font-size:24px;
     color:var(--lightGray);
 }
-
-#profileImg{
-    width:70%;
+.navButtons{
+    height:200px;
 }
 
-#pageButtons .button{
-    overflow-wrap:break-word;
-    white-space:break-spaces;
-    line-height:12px;
-    font-size: 12px;
+.pageButtons{
+    height:200px;
 }
 
-#left-nav .button{
-    line-height:12px;
+.button{
+    text-align:center;
+    color:var(--lightGray);
     border:none;
     border-radius:5px;
-    color:var(--lightGray);
     box-shadow: 3px 3px var(--primaryTeal);
+    font-size:18px;
 }
 
 .navBtn{
-    background-color: var(--secondaryTeal);
-}
-
-.mobile-nav .navbar-item {
-    color: var(--lightGray);
-}
-
-.mobile-nav.navbar-burger{
-    color:var(--lightGray);
+    background-color:var(--secondaryTeal);
 }
 
 .pageBtn{
     background-color:var(--accent);
 }
 
-.pageBtn#removeBtn{
+#removeBtn{
     background-color:var(--darkGray);
     color:var(--primaryTeal);
-} 
-
-.pageBtnM{
-    color: var(--lightGray);
-    background-color:var(--secondaryTeal);
 }
 
-.pageBtnM#removeBtn{
-    color: var(--lightGray);
-    background-color:var(--accent);
+.table thead{
+    background-color: var(--secondaryTeal);
+}
+
+.table thead td{
+    color:var(--lightGray);
+    background-color: var(--secondaryTeal);
 }
 
 #titleName{
+    color: var(--primaryTeal);
+}
+
+#companyName{
     color: var(--primaryTeal);
 }
 
@@ -220,171 +102,176 @@ html{
     background-color:var(--darkGray);
 }
 
-#searchBar{
-    height:30px;
-    border: 2px solid var(--secondaryTeal);
-    border-radius: 5px;
-}
-
-/***START OF TABLE *****/
-.table-container{
-    box-shadow: 7px 7px var(--accent);
-    border: 2px solid var(--secondaryTeal);
-    border-radius:10px;
-}
-
-.table-section{
-    width:90%;
-}
-
-.mobilePageSection{
-    width:90%;
-}
-
-#filterBy{
-    border:none;  
-    border-radius:10px;
+#profileBlock {
     background-color: var(--secondaryTeal);
+    margin: 50px 30px 30px 40px;
+    border-radius: 15px;
 }
 
-.table#filterBy th{
-    color:var(--lightGray);
-    vertical-align:middle;
-    border:none;
-}
-
-.table img{
-    height:20px;
-    width:20px;
-}
-
-#directory{
-    color:var(--primaryTeal);
-}
-
-.tableWrap{
-    max-height:400px;
-    overflow:auto;
-    border-radius:10px;
-}
-
-.t-row{
-    height:40px;
-    border-bottom: 2px solid var(--secondaryTeal);
-}
-
-table#directory td{
-    vertical-align:middle;
-}
-/***specifically for dept directory***/
-#name a{
-    color:var(--accent);
-}
-
-#selectDirRow{
-    width: 5%;
-}
-#deptIcon{
-    width: 15%;
-}
-
-#deptDir, #supEmail{
-    width:40%;
-}
-
-@media screen and (max-width: 1023px){
-    .navbar-menu.mobile-nav{
-        background-color:var(--secondaryTealTransparent); 
-        color: var(--lightGray);
-    }
-}
-/***END OF TABLE ***/
-/************ END of Valerie's CSS for directory pages
-
-
-//***START of CSS changes for add employee page*****/
-#addEmployee{
-    border: 2px solid var(--secondaryTeal);
-    box-shadow: 15px 15px var(--accent);
-}
-
-.input.info{
-    border: 2px solid var(--secondaryTeal);
-    line-height:8px;
-    color: var(--primaryTeal);
-    height: 36px;
-}
-
-#continue{
-    background-color: var(--lightGray);
-    color: var(--primaryTeal);
-    border: 3px solid var(--accent); 
-    border-radius: 7px;
-}
-/******End of CSS for Add employee Page******/
-.nav {
-    display: flex;
+#profileInfo {
     background-color: var(--secondaryTeal);
-    overflow: hidden;
-    max-height: 30%;
-    min-height: 250px;
+    border-radius: 30px;
+    padding: 12px;
+    margin: 0px 10px 0px 10px;
 }
 
-.profile-image {
-    margin-left: 35px;
+#blockHeader {
+    color: var(--lightGray);
+    background-color: var(--secondaryTeal);
+    margin-left: 7px;
+    text-align: justify;
+    border-radius: 10px;
     padding: 10px;
-    min-width: 225px;
-    min-height: 225px;
 }
 
-.nav-img {
-     position: relative;
-     top: -70px;
-}
-
-
-#Employee-text {
+#jobHeader {
     color: var(--accent);
+    background-color: var(--lightGray);
+    margin-left: 25px;
+    margin-right: 15px;
+    text-align: justify;
+    border-radius: 15px;
+    padding: 10px;
 }
 
-#nav-button1 {
-    max-width: 160px;
+#jobBlock {
+    background-color: var(--lightGray);
+    margin-left: 255px;
+    margin-right: 15px;
+    border-radius: 10px;
 }
 
-#view {
-    border-radius: 7px;
-    background-color: var(--accent);
-    color: var(--pageBg);
-    font-weight: 500;
-} 
+#jobInfo{
+    margin-right: 20px;
+}
 
-
-.spacer {
+#profileImg2 {
+    padding: 60px;
+    margin-left: 16px;
     background-color: var(--secondaryTeal);
-    height: auto;
-    width: auto;
-    border-radius: 15px;
-}
-
-
-#lower-body {
-    
-    border-radius: 15px;
-    padding: 1px;
-    margin: 55px;
-    height: 100%;
-}
-
-#nav-img {
-    position: relative;
-    top: 30px;
 
 }
 
-#card-size {
-    height: 100%;
+#imgHolder {
+    background-color: var(--secondaryTeal);
+    border-radius: 10px;
+    margin-bottom: 25px;
 }
 
-#second-card {
-    margin-top: 2%;
+#employeeHolder {
+    background-color: var(--lightGray);
+    border-radius: 20px;
+    margin-bottom: 25px;
+    margin-top: -30px;
+    margin-left: 25px;
+    margin-right: 20px;
+    padding: 0px 20px 0px 20px;
+}
+
+#employeeName2 {
+    color: var(--lightGray);
+    background-color: var(--secondaryTeal);
+    text-align: left;
+    margin: auto;
+    align-self: flex-start;   
+}
+
+#workInfo{
+    color: var(--lightGray);
+    background-color: var(--secondaryTeal);
+    align-items:flex-start;
+    margin-left: 300px;
+    margin-top: -30px;
+
+}
+
+#workBlock{
+    margin: 0px 0px 0px 0px;
+}
+
+#emailData {
+    color: var(--lightGray);
+    padding: 0px;
+    margin-top: -15px;
+}
+
+#phoneInfo {
+    color: var(--lightGray);
+    background-color: var(--secondaryTeal);
+    align-items:flex-start;
+    margin-top: 0px;
+    margin-left: 300px;
+}
+
+#phoneData {
+    color: var(--lightGray);
+    padding: 0px;
+    margin-top: -15px;
+    margin-left: 320px;
+}
+
+#idInfo{
+    color: var(--lightGray);
+    background-color: var(--secondaryTeal);
+    align-items:flex-start;
+    margin-top: 5px;
+    margin-left: 305px;
+}
+
+#idData{
+    color: var(--lightGray);
+    padding: 0px;
+    margin-top: -15px;
+    margin-left: 335px;
+}
+
+#jobHolder{
+    margin-top: -50px;
+}
+
+#employeeBlock{
+    background-color: var(--lightGray);
+    padding: 30px 0px 0px 30px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#roleInfo{
+    padding: 0px 0px 20px 0px;
+    margin-left: -45px;
+}
+
+#roleData{
+    margin-top:-55px;
+    margin-left: 130px;
+}
+
+#deptInfo{
+    margin-left: -55px;
+    margin-top: -10px;
+}
+
+#deptData{
+    margin-left: 130px;
+    margin-top: -50px;
+}
+
+#managerInfo{
+    margin-left: -55px;
+    margin-top: -10px;
+}
+
+#managerData{
+    margin-left: 130px;
+    margin-top: -48px;
+}
+
+#salaryInfo{
+    margin-left: -55px;
+    margin-top: -10px;
+}
+
+#salaryData{
+    margin-left: 130px;
+    margin-top: -50px;
 }
