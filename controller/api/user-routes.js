@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/signup', (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
   User.create({
     username: req.body.username,
@@ -48,15 +48,19 @@ router.post('/login', (req, res) => {
     }
   }).then(dbUserData => {
     if (!dbUserData) {
-      res.status(400).json({ message: 'No user with that email address!' });
+      alert('No user with that email address!')
+      // res.status(400).json({ message: 'No user with that email address!' });
       return;
     }
 
     const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect password!' });
+      {alert('Incorrect password!')}
+      // res.status(400).json({ message: 'Incorrect password!' });
       return;
+    } else {
+      alert('No user with that email address!')
     }
 
     req.session.save(() => {
@@ -66,6 +70,7 @@ router.post('/login', (req, res) => {
       req.session.loggedIn = true;
 
     res.json({ user: dbUserData, message: 'You are now logged in!' });
+    res.render('homepage')
     });
   });
 });
