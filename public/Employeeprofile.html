@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Department Directory</title>
+    <title>Company Name</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
@@ -76,62 +76,57 @@
                 <!--information located on top of page, company name and page path-->
                 <section id="companyName" class="pt-2">
                     <p id="titleName" class="title pl-6 pt-3 pb-2 is-size-3 has-text-weight-normal">Company name</p>
-                    <p id ="pagePath"class="subtitle py-1 pl-6 is-size-6">Department Directory</p>
+                    <p id ="pagePath"class="subtitle py-1 pl-6 is-size-6">Employee Directory > Profile </p>
                 </section>
 
-            <!--the part of the page where the content differs. -->
-            <section id="page-content" class = "pr-3">  
-                <!--wrapped all the content in a container so would be able to center it-->
-                <div class="table-section mx-auto pb-6">
-                    <div class="columns mx-0 mt-2 is-multiline is-mobile">
-                        <!--Search input-->
-                        <div class="column is-narrow p-0  my-1 mr-2">
-                            <input id="searchBar" placeholder="Search" class="has-text-centered">
-                        </div>
-                        <!--buttons for actions will appear besides the search input in mobile-->
-                        <div id="pageButtons" class="field is-grouped column p-0  my-1 is-hidden-desktop is-mobile has-text-right">
-                            <!--buttons to edit/create/or remove content from the directory-->
-                            <a href="./addemployee.html" class="pageBtnM my-0 py-2 button has-text-centered is-responsive has-text-weight-normal ">Add employee</a>
-                            <button class="pageBtnM button has-text-centered my-0 py-2 is-responsive has-text-weight-normal">Edit employee</button>
-                            <button id="removeBtn" class="pageBtnM button my-0 py-2 has-text-centered is-responsive has-text-weight-normal ">Remove employees</button>
-                        </div>
-                    </div>
-                    
-                    <!--This table is the header, had to be seperated to add space between the header and the data-->
-                    <div class="tableWrap is-fullwidth">
-                        <table id="filterBy" class="table mb-2 is-fullwidth">
-                            <thead class="dir is-fullwidth">
-                                <tr>
-                                    <th id="selectDirRow" class="has-text-weight-bold has-text-centered"><input type="checkbox" disabled></td>
-                                    <th id="deptIcon" class="has-text-weight-bold has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <th id="deptDir" class="has-text-weight-bold has-text-centered">Department"</th>
-                                    <th id="supEmail" class="has-text-weight-bold has-text-centered">Supervisor</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
+                <!--the part of the page where the content differs. -->
 
-                    <!--This is the table holding all the information of the database-->
-                    <!--wrapped in a div so to apply a border around it-->
-                    <div class="table-container tableWrap is-fullwidth">
-                        <table id="directory" class ="table is-fullwidth is-hoverable is-narrow">
-                            <tbody class="is-fullwidth">
-                                <!--/////////////////////////////////////////////////////////////////-->
-                                <!--This information will be added dynamically, placeholders for now-->
-                                <tr id="index-1" class="t-row is-fullwidth">
-                                    <td id="selectDirRow"><input type="checkbox"></td>
-                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="deptDir">Department1</td>
-                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
-                                </tr>
-                            </tbody>
-                        </table>
+            <div id="profileHolder">
+                <div id="profileBlock" class="container is-parent">
+                    <div id="profileInfo" class="columns is-parent is-8">
+                        <h2 id="blockHeader" class="columns is-8 title is-2">Personal Information</h2></div>
+                        <div id="imgHolder" class="column is-4 is-flex">
+                        <img id="profileImg2" class="column is-8 inline-flex is-left" src="./images/profileicon.png"></img>
+                            <h2 id="employeeName2" class="column is-6 has-text-left is-size-4 is-narrow">Employee 1<br>
+                            Last Name</h2>
+                            <div id="workBlock" class="container is-parent">
+                            <div id="workInfo" class="column is-6 is-flex is-offset-1 is-right is-gapless is-0">Work Email:</div>
+                               <h2 id="emailData" class="column is-8 is-offset-7 is-flex is-gapless is-0">employee1lastname@company.com</h2>
+                               <div id="phoneInfo" class="column is-6 is-offset-1 is-flex is-right is-gapless is-0">Phone Number:</div>
+                               <h2 id="phoneData" class="column is-8 is-offset-10 is-flex is-gapless is-0">(512)xxx-xxxx</h2>
+                               <div id="idInfo" class="column is-6 is-flex is-offset-1 is-right is-gapless is-0">Employee ID:</div>
+                               <h2 id="idData" class="column is-8 is-offset-10 is-flex is-gapless is-0">xxxxxxx</h2>
+                                        </div>                           
+                                    </div>
+                                </div>
+                            </div>                    
+                        </div>
+                 </div>
+            </div>
+            <div id="jobHolder">
+                <div id="jobBlock" class="container is-parent">
+                    <div id="jobInfo" class="columns is-parent is-8">
+                        <h2 id="jobHeader" class="column is-8 title is-2">Employee Information</h2></div>
+                        <div id="employeeHolder" class="columns is-4 is-flex">
+                            <div id="employeeBlock" class="container is-parent">
+                            <div id="roleInfo" class="column is-3 is-flex is-gapless is-0">Role at Company:</div>
+                            <div id="roleData" class="column is-3 is-flex is-gapless is-0">Web Developer</div>
+                            <div id="deptInfo" class="column is-3 is-flex is-gapless is-0">Department:</div>
+                            <div id="deptData" class="column is-3 is-flex is-gapless is-0">Information Technology</div>
+                            <div id="managerInfo" class="column is-3 is-flex is-gapless is-0">Reporting Manager:</div>
+                            <div id="managerData" class="column is-3 is-flex is-gapless is-0">Employee 7 Last Name</div>
+                            <div id="salaryInfo" class="column is-3 is-flex is-gapless is-0">Salary:</div>
+                            <div id="salaryData" class="column is-3 is-flex is-gapless is-0">$xxx,xxx</div>
+                            </div>
+                            <img id="idImg" class="column is-5 is-flex is-gapless is-0" src="./images/id_Card.png"></img>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </div>   
+            </div>
+        </div>
+   
         </div>
     </div>
-
     <script src="./js/navbardropdown.js"></script>
 </body>
 
