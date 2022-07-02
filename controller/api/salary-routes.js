@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const Salary = require("../../models/Salary");
 
+// http://localhost:3001/api/salaries/
+
 // get all users
 router.get("/", (req, res) => {
   Salary.findAll({

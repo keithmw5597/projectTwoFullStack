@@ -1,5 +1,7 @@
 const router = require("express").Router();
 
+// HOMEPAGE ROUTE
+
 router.get("/", (req, res) => {
   res.render("homepage", {
     id: 1,
@@ -8,9 +10,6 @@ router.get("/", (req, res) => {
     created_at: new Date(),
   });
 });
-
-
-
 
 
 router.get('/login', (req,res)=>{

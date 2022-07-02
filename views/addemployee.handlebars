@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Department Directory</title>
+    <title>Add Employee</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 
 <body id="directoryPage" class="maxHt">
@@ -76,63 +76,103 @@
                 <!--information located on top of page, company name and page path-->
                 <section id="companyName" class="pt-2">
                     <p id="titleName" class="title pl-6 pt-3 pb-2 is-size-3 has-text-weight-normal">Company name</p>
-                    <p id ="pagePath"class="subtitle py-1 pl-6 is-size-6">Department Directory</p>
+                    <p id ="pagePath"class="subtitle py-1 pl-6 is-size-6">Employee Directory</p>
                 </section>
-
             <!--the part of the page where the content differs. -->
-            <section id="page-content" class = "pr-3">  
-                <!--wrapped all the content in a container so would be able to center it-->
-                <div class="table-section mx-auto pb-6">
-                    <div class="columns mx-0 mt-2 is-multiline is-mobile">
-                        <!--Search input-->
-                        <div class="column is-narrow p-0  my-1 mr-2">
-                            <input id="searchBar" placeholder="Search" class="has-text-centered">
-                        </div>
-                        <!--buttons for actions will appear besides the search input in mobile-->
-                        <div id="pageButtons" class="field is-grouped column p-0  my-1 is-hidden-desktop is-mobile has-text-right">
-                            <!--buttons to edit/create/or remove content from the directory-->
-                            <a href="./addemployee.html" class="pageBtnM my-0 py-2 button has-text-centered is-responsive has-text-weight-normal ">Add employee</a>
-                            <button class="pageBtnM button has-text-centered my-0 py-2 is-responsive has-text-weight-normal">Edit employee</button>
-                            <button id="removeBtn" class="pageBtnM button my-0 py-2 has-text-centered is-responsive has-text-weight-normal ">Remove employees</button>
-                        </div>
-                    </div>
-                    
-                    <!--This table is the header, had to be seperated to add space between the header and the data-->
-                    <div class="tableWrap is-fullwidth">
-                        <table id="filterBy" class="table mb-2 is-fullwidth">
-                            <thead class="dir is-fullwidth">
-                                <tr>
-                                    <th id="selectDirRow" class="has-text-weight-bold has-text-centered"><input type="checkbox" disabled></td>
-                                    <th id="deptIcon" class="has-text-weight-bold has-text-centered"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <th id="deptDir" class="has-text-weight-bold has-text-centered">Department"</th>
-                                    <th id="supEmail" class="has-text-weight-bold has-text-centered">Supervisor</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
+            <section id="page-content" class = "container">
 
-                    <!--This is the table holding all the information of the database-->
-                    <!--wrapped in a div so to apply a border around it-->
-                    <div class="table-container tableWrap is-fullwidth">
-                        <table id="directory" class ="table is-fullwidth is-hoverable is-narrow">
-                            <tbody class="is-fullwidth">
-                                <!--/////////////////////////////////////////////////////////////////-->
-                                <!--This information will be added dynamically, placeholders for now-->
-                                <tr id="index-1" class="t-row is-fullwidth">
-                                    <td id="selectDirRow"><input type="checkbox"></td>
-                                    <td id="deptIcon"><img src="images/profileicon.png" id="small_icon"></th>
-                                    <td id="deptDir">Department1</td>
-                                    <td id="supEmail">Supervisor1.lastName@company.com</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <!--**************************************-->
+                <!--START of KEITH'S SIGN UP PAGE CODE-->
+                <div class="container">
+                    <div class="column is-9 mx-auto">
+                        <div class="card py-5 px-6 mx-3" id="addEmployee">
+                            <form class="field px-5">
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input type="text" class="input info" placeholder="Email address">
+                                </div>
+                            
+                            <h2 class="persnoal-information">Personal Information</h2>
+                            <section class="section p-1">
+                                <div class="container">
+                                    <div class="columns p-1">
+                                        <div class="column p-1">
+                                            <label class="label"></label>
+                                            <div class="control">
+                                                <input type="text" class="input info" placeholder="First name">
+                                            </div>            
+                                        </div>
+                                        <div class="column p-1">
+                                            <label class="label"></label>
+                                            <div class="control">
+                                                <input type="text" class="input info" placeholder="Last name">
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="columns p-1">
+                                    <div class="column p-1">
+                                        <label class="label"></label>
+                                        <div class="control">
+                                            <input type="text" class="input info" placeholder="Phone number">
+                                        </div> 
+                                    </div>
+                                    <div class="column p-1">
+                                        <label class="label"></label>
+                                        <div class="control">
+                                            <input type="text" class="input info" placeholder="Date of Birth">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <h2>Employee Information</h2>
+                            <section class="section p-1">
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input info" type="text" placeholder="Your role with the company">
+                                </div>
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input info" type="text" placeholder="Department">
+                                </div>
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input info" type="text" placeholder="Employee ID">
+                                </div>
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input info" type="text" placeholder="Manager">
+                                </div>
+                                <div class="control">
+                                    <button class="button mt-3 is-fullwidth" id="continue">Save</button>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
+                <!-- END OF KEITH'S SIGN UP PAGE CODE -->
             </section>
         </div>
     </div>
-
-    <script src="./js/navbardropdown.js"></script>
+        <!--script for menu-->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Get all "navbar-burger" elements
+                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+    
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+    
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+    
+                    });
+                });
+            });
+        </script>
 </body>
-
-</html>

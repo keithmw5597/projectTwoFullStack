@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const Departments = require("../../models/Departments");
 
+// http://localhost:3001/api/departments/
+
 // get all users
 router.get("/", (req, res) => {
   Departments.findAll({
