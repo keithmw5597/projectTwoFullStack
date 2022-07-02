@@ -366,6 +366,9 @@ table#directory td{
     border-radius: 15px;
 }
 
+#employee-card {
+    box-shadow: 15px 15px var(--accent);
+}
 
 #lower-body {
     
@@ -383,6 +386,7 @@ table#directory td{
 
 #card-size {
     height: 100%;
+    box-shadow: 15px 15px var(--accent);
 }
 
 #second-card {
