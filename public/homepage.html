@@ -10,7 +10,7 @@
     <title>Homepage</title>
 </head>
 <body>
-    <nav class="nav is-size-7" id="home-nav">
+    <nav class="nav" id="home-nav">
         <div class="profile-image">
             <img class="profileImage" src="./images/profileicon.png">
         </div>
@@ -19,39 +19,44 @@
             <h1 class="is-size-1 has-text-left mt-0" id="Employee-text">Employee</h1>
             <p class="is-size-3 has-text-white mt-3 mb-3 has-text-weight-light">Where would you like to navigate?</p>
         </div>
-        <div class="nav-img">
-            <!-- <img class="nav-img" src="./images/Asset 2.png"> -->
+        <div class="nav-img is-hidden-touch">
+            <img class="nav-img1" src="./images/Asset2.png">
         </div>
         <div>
-            <a href="./Employeeprofile.html">
-                <button class="button mt-4 mr-6" id="view">View Profile</button>
+            <a href="../index.html">
+                <button class="button mt-4 mr-6" id="view">Log out</button>
             </a>
+            
             
         </div>
     </nav>
     <div class="spacer ml-6 mr-6 pb-6 mb-6">
         <section class="section p-7 mb-7" id="lower-body">
-            <div class="container  p-6">
-                <div class="columns pt-6 pb-6">
-                    <div class="column p-6 mt-3 mb-3">
-                        <div class="card p-6 mr-5 has-text-centered" id="employee-card">
-                            <!-- image -->
-                            <img src="./images/people.png">
-                            <div class="control">
-                                <a href="./employeedir.html">
-                                    <button class="button mt-2  " id="button4">View Employees</button>
-                                </a>
+            <div class="container pb-6 pt-6">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="card has-text-centered p-6 m-2" id="employee-card">
+                                <div class="card-image">
+                                    <figure class="home-cards image">
+                                        <img class="image-size" src="./images/people.png" alt="people">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <button class="button" id="button4">View Employees</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="column p-6 mt-3 mb-3">
-                        <div class="card p-6 ml-5 has-text-centered" id="card-size">
-                            <!-- image -->
-                            <img class="second-card mt-5" src="./images/data.png">
-                            <div class="control">
-                                <a href="./departmentdir.html">
-                                    <button class="button mt-6" id="button5">View Department</button>
-                                </a>
+                        <div class="column">
+                            <div class="card has-text-centered p-6 m-2" id="card-size">
+                                <div class="card-image">
+                                    <figure class="home-cards image ">
+                                        <img class="image-size" src="./images/people.png" alt="people">
+                                        <!-- <img class="image-size py-6" src="./images/data.png" alt="books"> -->
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <button class="button" id="button5">View Department</button>
+                                </div>
                             </div>
                         </div>
                     </div>
