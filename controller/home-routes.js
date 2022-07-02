@@ -19,6 +19,8 @@ res.render("homepage")
 })
 
 router.get("/signUp", (req, res) => {
+
+  console.log('signup fired')
   res.render("signup");
 });
 
