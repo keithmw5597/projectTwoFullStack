@@ -326,8 +326,8 @@ table#directory td{
     display: flex;
     background-color: var(--secondaryTeal);
     overflow: hidden;
-    max-height: 250px;
-    min-height: 250px;
+    /* max-height: 250px;
+    min-height: 250px; */
 }
 
 .profile-image {
@@ -338,8 +338,10 @@ table#directory td{
 }
 
 .nav-img {
-     position: relative;
-     top: -70px;
+    background-image: url(/public/images/Asset2.png);
+    background-size: auto;
+    /* position: relative;
+    top: -70px; */
 }
 
 
