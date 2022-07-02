@@ -32,6 +32,7 @@ router.post('/signup', (req, res) => {
         res.json(dbUserData);
 
       })
+      res.render("login")
     })
     .catch(err => {
       console.log(err);

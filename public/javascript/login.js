@@ -9,7 +9,7 @@ async function signupFormHandler(event) {
     const password = document.querySelector('#password-signup').value.trim();
   
     if (username && email && password) {
-      const response =  await fetch('/api/users', {
+      const response =  await fetch('/api/users/signup', {
         method: 'post',
         body: JSON.stringify({
           username,
@@ -24,9 +24,11 @@ async function signupFormHandler(event) {
       //check the response status
       if(response.ok){
         console.log('success')
+        document.location.replace('login')
       }else{
-        alert(repsonse.statusText);
+        alert(response.statusText);
       }
+  
     }
   }
 
@@ -54,6 +56,7 @@ async function loginFormHandler(event) {
 
       //check the response status
       if(response.ok){
+
         document.location.replace('homepage')
       }else{
         alert(repsonse.statusText);
@@ -61,6 +64,6 @@ async function loginFormHandler(event) {
     }
   }
 
-document.getElementById('button1').addEventListener('click', loginFormHandler)
+// document.getElementById('button1').addEventListener('click', loginFormHandler)
 
 document.getElementById('button3').addEventListener('click', signupFormHandler)
