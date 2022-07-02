@@ -3,20 +3,15 @@ const router = require("express").Router();
 // HOMEPAGE ROUTE
 
 router.get("/", (req, res) => {
-  res.render("homepage", {
-    id: 1,
-    name: "Will",
-    supervisor: "Malcolm",
-    created_at: new Date(),
-  });
+  res.render("login");
 });
 
 
 router.get('/login', (req,res)=>{
-  // if (req.session.loggedIn){
-  //   res.redirect('/');
-  //   return
-  // }
+  if (req.session.loggedIn){
+    res.redirect('/');
+    return
+  }
 
 
   res.render('login')
