@@ -14,15 +14,15 @@ class Employee extends Model {}
         primaryKey: true,
         autoIncrement: true,
       },
-      EmployeeFirstname: {
+      firstName: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      EmployeeLastname: {
+      lastName: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      deptID: {
+      department: {
         type: DataTypes.INTEGER,
       },
       email: {
