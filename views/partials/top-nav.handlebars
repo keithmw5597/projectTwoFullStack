@@ -1,3 +1,5 @@
+{{!-- For this handlebars, make sure to get the route to post the username's name here, from my understanding the user only has a username method. --}}
+
 <!-- Only appears on mobile views-->
 <section id="top-nav" class="is-hidden-desktop is-mobile">
     <!--Hamburger menu for mobile-->
@@ -6,7 +8,7 @@
             <a class="navbar-item" href="https://bulma.io">
                 <div id="userProfile" class="is-flex">
                     <p class="is-size-4 profileText mr-2">Welcome,</p>
-                    <p id="employeeName" class="is-size-4 profileText">Employee 1</p>
+                    <p id="employeeName" class="is-size-4 profileText">{{user.username}}</p>
                 </div>
             </a>
             <a role="button" class="navbar-burger mobile-nav" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -24,7 +26,7 @@
     
                 <a class="navbar-item" href="/api/departments">Department Directory</a>
                 <!--Log Out button-->
-                <a class="navbar-item" id="log-out">Log Out</a>
+                <a class="navbar-item" id="log-out" onclick="return logout()">Log Out</a>
             </div>
         </div>
     </nav>
