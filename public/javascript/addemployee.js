@@ -19,7 +19,7 @@ const manager = document.querySelector('#manager').value.trim();
 async function signupFormHandler(event) {
     event.preventDefault();
   
-    getInputs() {
+    getInputs() = function() {
         if (form === "") {
             alert("Please complete all fields")
             return false;
@@ -51,7 +51,10 @@ async function signupFormHandler(event) {
               }
         };
     }
-  }
+  };
+
+
+document.getElementById('buttonId').addEventListener('click', getInputs)
 
 
 document.getElementById('buttonId').addEventListener('click', getInputs)
