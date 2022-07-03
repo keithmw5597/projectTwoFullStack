@@ -64,6 +64,6 @@ async function loginFormHandler(event) {
     }
   }
 
-// document.getElementById('button1').addEventListener('click', loginFormHandler)
+document.getElementById('button1').addEventListener('click', loginFormHandler)
 
 document.getElementById('button3').addEventListener('click', signupFormHandler)
