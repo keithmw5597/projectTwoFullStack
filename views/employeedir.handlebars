@@ -1,89 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Employee Directory</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+<body id="directoryPage" class="maxHt">
+    <div class="maxHt columns is-tablet is-centered p-0">
+        {{>employee-left-nav}}
 
-<body class="columns i mobile">
-    <!--page information for the left column-->
-    <div id="left-nav" class="column">
-        <div class="container pl-2">
-            <div id="userProfile" class="columns is-multiline is-left pl-2">
-                <h4 class="profileText column is-10">Welcome,</h4>
-                <img class="profileText column is-10" src="/img/profileicon.png"></img>
-                <h4 class="profile Text column is-10" id="employeeName">Employee 1</h4>
-            </div>
-            <!-- seperate the section between the profile and the buttons below-->
-            <div class="block">
-                <!--buttons for links to other pages-->
-                <div id="navButtons" class="columns is-multiline is-centered mb-6" >
-                    <a src="" class="button navBtn column is-9 mb-2">Home</a>
-                    <a src="" class="button navBtn column is-9 mb-2">Employees</a>
-                    <a src="" class="button navBtn column is-9">Department</a>
-                </div>
-
-                <!--buttons to edit/create/or remove content from the directory-->
-                <div id="pageButtons" class="columns is-multiline is-centered mt-6">
-                    <a src="" class="button pageBtn column is-9 mb-2">Add Employees</a>
-                    <!--*******************QUESTION***************************************-->
-                    <!--these aren't going to new pages, should they be buttons or inputs?-->
-                    <button class="button pageBtn column is-9 mb-2">Edit Employees</button>
-                    <button class="button pageBtn column is-9" id="removeBtn">Remove Employees</button>
-                </div>
+        {{!-- <!--page information for the right column--> --}}
+        <div id="right-content" class="maxHt column is-full-mobile mx-0 p-0">
+            <div class="is-fullwidth">
+                {{>top-nav}}
+                {{!-- <!--information located on top of page, company name and page path--> --}}
+                <section id="companyName" class="pt-2">
+                    <p id="titleName" class="title pl-6 pt-3 pb-2 is-size-3 has-text-weight-normal">Company name</p>
+                    <p id ="pagePath"class="subtitle py-1 pl-6 is-size-6">Employee Directory</p>
+                </section>
+                {{!-- <!--the part of the page where the content differs. --> --}}
+                <section id="page-content" class = "pr-3">      
+                    {{!-- <!--wrapped all the content in a container so would be able to center it-->       --}}
+                    <div class="table-section mx-auto pb-6">
+                        <div class="columns mx-0 mt-2 is-multiline is-mobile">
+                            {{!-- <!--Search input--> --}}
+                            <div class="column is-narrow p-0  my-1 mr-2">
+                                <input id="searchBar" placeholder="Search" class="has-text-centered">
+                            </div>
+                            {{!-- <!--buttons for actions will appear besides the search input in mobile--> --}}
+                            <div id="pageButtons" class="field is-grouped column p-0  my-1 is-hidden-desktop is-mobile has-text-right">
+                                {{!-- <!--buttons to edit/create/or remove content from the directory--> --}}
+                                <a href="./api/addemployee" class="pageBtnM my-0 py-2 button has-text-centered is-responsive has-text-weight-normal ">Add employee</a>
+                                <button class="pageBtnM button has-text-centered my-0 py-2 is-responsive has-text-weight-normal">Edit employee</button>
+                                <button id="removeBtn" class="pageBtnM button my-0 py-2 has-text-centered is-responsive has-text-weight-normal ">Remove employees</button>
+                            </div>
+                        </div>
+                        
+                        {{!-- <!--Actual Table information--> --}}
+                        <div class="tableWrap is-fullwidth">
+                            <!--This table is the header, had to be seperated to add space between the header and the data-->
+                            <table id="filterBy" class="table mb-2 is-fullwidth">
+                                <thead class="dir is-fullwidth">
+                                    <tr>
+                                        <th id="selectDirRow" class="has-text-weight-bold has-text-centered"><input type="checkbox" disabled></th>
+                                        <th id="icon" class="has-text-weight-bold has-text-centered"><img src="/img/profileicon.png" id="small_icon"></th>
+                                        <th id="name" class="has-text-weight-bold has-text-centered">Full Name</th>
+                                        <th id="email" class="has-text-weight-bold has-text-centered">Work Email</th>
+                                        <th id="dept" class="has-text-weight-bold has-text-centered ">Department</th>
+                                        <th id="start-date" class="has-text-weight-bold has-text-centered">Start Date</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>                       
+                        {{!-- <!--This is the table holding all the information of the database-->
+                        <!--wrapped in a div so to apply a border around it--> --}}
+                        <div class="table-container tableWrap is-fullwidth">
+                            <table id="directory" class ="table is-fullwidth is-hoverable">
+                                <tbody class="is-fullwidth">
+                                    {{!-- <!--/////////////////////////////////////////////////////////////////-->
+                                    <!--This information will be added dynamically, placeholders for now-->
+                                    <!--leave this first row as sample--> --}}
+                                    <tr id="index-1" class="t-row is-fullwidth">
+                                        <td id="selectDirRow" class="has-text-centered"><input type="checkbox"></td>
+                                        <td id="icon" class="has-text-centered"><img src="/img/profileicon.png" id="small_icon"></th>
+                                        <td id="name" class="has-text-centered"><a src="">Employee 1</a></td>
+                                        <td id="email"class="has-text-centered">Employee1.lastName@company.com</td>
+                                        <td id="dept"class="has-text-centered">Information Technology</td>
+                                        <td id="start-date"class="has-text-centered">6/24/24</td>
+                                    </tr>
+                                    {{!-- <!--For each employee from the employee database, the data will fill up the table--> --}}
+                                    {{#each employees}}
+                                        {{>employee-row}}
+                                    {{/each}}                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
-    <!--page information for the right column-->
-    <section id="right-content" class="column is-10">
-        <!--This remains the same in subpage, the path changes-->
-        <div class="block content">
-            <h1 id="companyName" class="title">Company name</h1>
-            <h3 id ="pagePath" class="subtitle">Employee Directory</h3>
-        </div>
-        
-        <!--This is where the actual page content starts-->
-        <div id="page-content" class="block container is-centered">
-            <!--input field to search for employee-->
-            <input id="search" placeholder="Search" type="input" class="mb-3"></input>
-            <!--the start of the table for the directory-->
-            <div class="table-container">
-                <table class ="table is-full-width">
-                    <thead>
-                        <tr>
-                            <th title="name">Full Name</th>
-                            <th title="email">Work Email</th>
-                            <th title="dept">Department</th>
-                            <th title="start-date">Start Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr id="index-1">
-                            <td id="name">Employee 1</td>
-                            <td id="email">Employee1.lastName@company.com</td>
-                            <td id="dept">Information Technology</td>
-                            <td id="start-date">6/24/24</td>
-                        </tr>
-                        <tr id="index-2">
-                            <td id="name">Employee 2</td>
-                            <td id="email">Employee2.lastName@company.com</td>
-                            <td id="dept">Information Technology</td>
-                            <td id="start-date">6/24/24</td>
-                        </tr>
-                        <tr id="index-3">
-                            <td id="name">Employee 2</td>
-                            <td id="email">Employee2.lastName@company.com</td>
-                            <td id="dept">Information Technology</td>
-                            <td id="start-date">6/24/24</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
