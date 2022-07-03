@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Company Name</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 
 <body id="directoryPage" class="maxHt">
     <div class="maxHt columns is-tablet is-centered p-0">
-        {{>employee-left-nav}}
-
         <!--Left column with navigation and action buttons, only appears on desktops on left side-->
         <div id="left-nav" class="column is-2 is-hidden-touch">
             <div class="maxHt p-4 is-flex is-flex-direction-column is-justify-content-space-between">
@@ -20,7 +18,7 @@
                 <div id="top-portion">
                     <div id="userProfile" class="pt-3 mb-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-space-around pb-0">
                         <p class="is-size-4 profileText">Welcome,</p>
-                        <img id="profileImg" class="is-size-5 profileText mt-4 mb-4 px-auto" src="/img/profileicon.png"></img>
+                        <img id="profileImg" class="is-size-5 profileText mt-4 mb-4 px-auto" src="./images/profileicon.png"></img>
                         <p id="employeeName" class="is-size-5 profileText">Employee 1</p>
                     </div>
 
@@ -53,7 +51,7 @@
                             <a class="navbar-item" href="https://bulma.io">
                                 <div id="userProfile" class="is-flex">
                                     <p class="is-size-4 profileText mr-2">Welcome,</p>
-                                    <p id="employeeName" class="is-size-4 profileText">{{EmployeeFirstname}} {{EmployeeLastname}}</p>
+                                    <p id="employeeName" class="is-size-4 profileText">Employee 1</p>
                                 </div>
                             </a>
                             <a role="button" class="navbar-burger mobile-nav" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -88,16 +86,16 @@
                     <div id="profileInfo" class="columns is-parent is-8">
                         <h2 id="blockHeader" class="columns is-8 title is-2">Personal Information</h2></div>
                         <div id="imgHolder" class="column is-4 is-flex">
-                        <img id="profileImg2" class="column is-8 inline-flex is-left" src="/img/profileicon.png"></img>
-                            <h2 id="employeeName2" class="column is-6 has-text-left is-size-4 is-narrow">{{EmployeeFirstname}} {{EmployeeLastname}}<br>
+                        <img id="profileImg2" class="column is-8 inline-flex is-left" src="./images/profileicon.png"></img>
+                            <h2 id="employeeName2" class="column is-6 has-text-left is-size-4 is-narrow">Employee 1<br>
                             Last Name</h2>
                             <div id="workBlock" class="container is-parent">
                             <div id="workInfo" class="column is-6 is-flex is-offset-1 is-right is-gapless is-0">Work Email:</div>
-                               <h2 id="emailData" class="column is-8 is-offset-7 is-flex is-gapless is-0">{{email}}</h2>
+                               <h2 id="emailData" class="column is-8 is-offset-7 is-flex is-gapless is-0">employee1lastname@company.com</h2>
                                <div id="phoneInfo" class="column is-6 is-offset-1 is-flex is-right is-gapless is-0">Phone Number:</div>
                                <h2 id="phoneData" class="column is-8 is-offset-10 is-flex is-gapless is-0">(512)xxx-xxxx</h2>
                                <div id="idInfo" class="column is-6 is-flex is-offset-1 is-right is-gapless is-0">Employee ID:</div>
-                               <h2 id="idData" class="column is-8 is-offset-10 is-flex is-gapless is-0">{{id}}</h2>
+                               <h2 id="idData" class="column is-8 is-offset-10 is-flex is-gapless is-0">xxxxxxx</h2>
                                         </div>                           
                                     </div>
                                 </div>
@@ -112,15 +110,15 @@
                         <div id="employeeHolder" class="columns is-4 is-flex">
                             <div id="employeeBlock" class="container is-parent">
                             <div id="roleInfo" class="column is-3 is-flex is-gapless is-0">Role at Company:</div>
-                            <div id="roleData" class="column is-3 is-flex is-gapless is-0">{{name}}</div>
+                            <div id="roleData" class="column is-3 is-flex is-gapless is-0">Web Developer</div>
                             <div id="deptInfo" class="column is-3 is-flex is-gapless is-0">Department:</div>
-                            <div id="deptData" class="column is-3 is-flex is-gapless is-0">{{deptID}}</div>
+                            <div id="deptData" class="column is-3 is-flex is-gapless is-0">Information Technology</div>
                             <div id="managerInfo" class="column is-3 is-flex is-gapless is-0">Reporting Manager:</div>
-                            <div id="managerData" class="column is-3 is-flex is-gapless is-0">{{supervisor}}</div>
+                            <div id="managerData" class="column is-3 is-flex is-gapless is-0">Employee 7 Last Name</div>
                             <div id="salaryInfo" class="column is-3 is-flex is-gapless is-0">Salary:</div>
-                            <div id="salaryData" class="column is-3 is-flex is-gapless is-0">{{salary}}</div>
+                            <div id="salaryData" class="column is-3 is-flex is-gapless is-0">$xxx,xxx</div>
                             </div>
-                            <img id="idImg" class="column is-5 is-flex is-gapless is-0" src="/img/id_Card.png"></img>
+                            <img id="idImg" class="column is-5 is-flex is-gapless is-0" src="./images/id_Card.png"></img>
                         </div>
                     </div>
                 </div>   
