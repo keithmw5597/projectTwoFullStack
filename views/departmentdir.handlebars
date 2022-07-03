@@ -1,10 +1,14 @@
+{{!-- This is under the assumption that their is a department array full of department objects that is passed when this handlebars is called. --}}
+
 <body id="directoryPage" class="maxHt">
     <div class="maxHt columns is-tablet is-centered p-0">
+        {{!-- partial for left nav --}}
         {{>dept-left-nav}}
 
         <!--page information for the right column-->
         <div id="right-content" class="maxHt column is-full-mobile mx-0 p-0">
             <div class="is-fullwidth">
+                {{!-- partial for top nav when in mobile view --}}
                 {{>top-nav}}
                 <!--information located on top of page, company name and page path-->
                 <section id="companyName" class="pt-2">
@@ -57,7 +61,7 @@
                                         <td id="deptDir">Department1</td>
                                         <td id="supName">Supervisor1Firstname Supervisor1Lastname/td>
                                     </tr>
-                                    <!--For each dept from the department database, the data will fill up the table-->
+                                    {{!-- <!--For each dept from the department array, the data will fill up the table--> --}}
                                     {{#each departments}}
                                         {{>department-row}}
                                     {{/each}}  

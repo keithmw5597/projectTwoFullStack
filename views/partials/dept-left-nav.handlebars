@@ -1,3 +1,6 @@
+{{!-- For this handlebars, make sure to get the route to post the username's name here, from my understanding the user only has a username method. --}}
+
+
 <!--Left column with navigation and action buttons, only appears on desktops on left side-->
 <div id="left-nav" class="column is-2 is-hidden-touch">
     <div class="maxHt p-4 is-flex is-flex-direction-column is-justify-content-space-between">
@@ -7,7 +10,8 @@
                 <button id="log-out" class="logoutBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium">Log Out</button>
                 <p class="is-size-4 profileText">Welcome,</p>
                 <img id="profileImg" class="is-size-5 profileText mt-4 mb-4 px-auto" src="/img/profileicon.png"></img>
-                <p id="employeeName" class="is-size-5 profileText">Employee 1</p>
+                {{!-- Insert the method to pull the current users --}}
+                <p id="employeeName" class="is-size-5 profileText">{{user.username}}</p>
             </div>
 
             <!--These buttons are links to other pages-->
