@@ -3,24 +3,28 @@ const router = require("express").Router();
 // HOMEPAGE ROUTE
 
 router.get("/", (req, res) => {
-  res.render("homepage", {
-    id: 1,
-    name: "Will",
-    supervisor: "Malcolm",
-    created_at: new Date(),
-  });
+  res.render("login");
+});
+
+router.get('/', (req,res)=>{
+  if (req.session.loggedIn){
+    res.redirect('/homepage');
+    return
+  }
+  res.render('login')
+})
+
+router.get('/homepage', (req,res)=>{
+res.render("homepage")
+})
+
+router.get("/signUp", (req, res) => {
+
+  console.log('signup fired')
+  res.render("signup");
 });
 
 
-router.get('/login', (req,res)=>{
-  // if (req.session.loggedIn){
-  //   res.redirect('/');
-  //   return
-  // }
-
-
-  res.render('login')
-})
 
 
 module.exports = router;

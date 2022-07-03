@@ -8,9 +8,7 @@ router.get("/", (req, res) => {
     // attributes: { exclude: ["password"] },
   })
     .then((UserData) =>
-      res.render("signup", {
-        UserData,
-      })
+      res.json(UserData)
     )
     .catch((err) => {
       console.log(err);
@@ -18,7 +16,7 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/signup', (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
   User.create({
     username: req.body.username,
@@ -34,6 +32,7 @@ router.post('/', (req, res) => {
         res.json(dbUserData);
 
       })
+      res.render("login")
     })
     .catch(err => {
       console.log(err);
@@ -48,16 +47,18 @@ router.post('/login', (req, res) => {
     }
   }).then(dbUserData => {
     if (!dbUserData) {
-      res.status(400).json({ message: 'No user with that email address!' });
+      console.log('1 No user with that email address!');
+      // res.status(400).json({ message: 'No user with that email address!' });
       return;
     }
 
     const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect password!' });
+      {alert('Incorrect password!')}
+      // res.status(400).json({ message: 'Incorrect password!' });
       return;
-    }
+    } 
 
     req.session.save(() => {
       // declare session variables
@@ -66,7 +67,9 @@ router.post('/login', (req, res) => {
       req.session.loggedIn = true;
 
     res.json({ user: dbUserData, message: 'You are now logged in!' });
+   
     });
+    res.render('homepage')
   });
 });
 
