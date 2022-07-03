@@ -1,0 +1,31 @@
+<!-- Only appears on mobile views-->
+<section id="top-nav" class="is-hidden-desktop is-mobile">
+    <!--Hamburger menu for mobile-->
+    <nav id="top-nav" class="is-hidden-desktop navbar px-4" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand mt-3 ">
+            <a class="navbar-item" href="https://bulma.io">
+                <div id="userProfile" class="is-flex">
+                    <p class="is-size-4 profileText mr-2">Welcome,</p>
+                    <p id="employeeName" class="is-size-4 profileText">Employee 1</p>
+                </div>
+            </a>
+            <a role="button" class="navbar-burger mobile-nav" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        
+        <div id="navbarBasicExample" class="navbar-menu mobile-nav"id ="" >
+            <div class="navbar-end">
+                <a class="navbar-item" href="/api">Homepage</a>
+        
+                <a class="navbar-item" href="/api/employees">Employee Directory</a>
+    
+                <a class="navbar-item" href="/api/departments">Department Directory</a>
+                <!--Log Out button-->
+                <a class="navbar-item" id="log-out">Log Out</a>
+            </div>
+        </div>
+    </nav>
+</section>
