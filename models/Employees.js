@@ -3,10 +3,10 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create our Employee model
-class Employee extends Model {}
+class Employees extends Model {}
   
   // create fields/columns for Employee model
-  Employee.init(
+  Employees.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -50,4 +50,4 @@ class Employee extends Model {}
     }
   );
   
-  module.exports = Employee;
+  module.exports = Employees;

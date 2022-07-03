@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Employees  = require("../../models/Employees");
+const Employees = require("../../models/Employees");
 
 // http://localhost:3001/api/employees/
 
@@ -19,23 +19,16 @@ router.get("/", (req, res) => {
 });
 
 
-  router.post('/add', (req, res) => {
-    // expects {"EmployeeFirstname":"Kevin", "EmployeeLastname":"Friday", "email":"lernantino@gmail.com", "deptID": 1, "password": "password1234"}
-    
+  router.post("/addemployee", (req, res) => {
+    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
     Employees.create({
-      EmployeeFirstname: req.body.EmployeeFirstname,
-      EmployeeLastname: req.body.EmployeeLastname,
-      deptID: req.body.deptID,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      department: req.body.department,
       email: req.body.email,
       password: req.body.password,
     })
-      .then((dbEmployeesData) => {
-        if (!dbEmployeesData) {
-          res.status(404).json({ message: "No Department found with this id" });
-          return;
-        }
-        res.json(dbEmployeesData);
-      })
+      .then((dbUserData) => res.json(dbUserData))
       .catch((err) => {
         console.log(err);
         res.status(500).json(err);
