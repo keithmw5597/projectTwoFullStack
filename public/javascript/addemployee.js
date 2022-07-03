@@ -16,7 +16,7 @@ const manager = document.querySelector('manager').value.trim();
 async function addemployeeHandler(event) {
     event.preventDefault();
 
-    router.get('/addemployee', function(req, res, next) {
+    router.get('/addemployee', function(req, res) {
         const userDetails = req.body;
     })
 }
