@@ -1,40 +1,57 @@
+<!DOCTYPE html>
 <html lang="en">
-
-  <head>
+<head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
     <title>Employee Aide</title>
-     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+</head>
+{{!-- {{#if loggedIn}} --}}
+    {{{body}}}
+    <script src="/javascript/navbardropdown.js"></script>
+    <script src="/javascript/logout.js"
+</body>
+{{!-- <body>
+    <div class="bg-log-in mt-7">
+        <section class="section mt-7 pt-8 pb-1 pl-6 pr-6">
+            <div></div>
+            <div class="container mt-7 pt-7">
+                <div class="columns p-7">
+                    <div class="column is-one-quarter m-5"></div>
+                    <div class="column is-one-quarter"></div>
+                    <div class="column mt-6 pt-6 pb-1" id="vcentered">
+                        <div class="card mt-7 pt-6 p-6">
+                            <h2 class="welcome">Welcome</h2>
+                            <form class="field">
+                            <label class="label"></label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="username or email address">
+                            </div>
+                            <label class="label"></label>
+                            <div>
+                                <input class="input" type="text" placeholder="Password">
+                            </div>
+                            <div class="control">
+                                    <button class="button mt-2" type="submit" id="button1">Log In</button>
+                            </div>
+                        </form>
+                        <div class="or">OR</div>
+                        <form>
+                            <label class="label">Not Registered?</label>
 
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>
-          {{!-- <a href="/">Our Project App</a> --}}
-        </h1>
-        <nav>
-        {{#if loggedIn}}
-        <button id="logout"class="btn-no-style">logout</button>
-        {{else}}
-        {{!-- <a href="/login">login</a> --}}
-        {{/if}}
-      </nav>
-      </header>
-      <main>
-        {{{body}}}
-      </main>
-      <footer>
-
-      </footer>
+                            <div class="control">
+                                <a href="api/signup">
+                                    <button class="button mt-2" type="button" id="button2">Create Account</button>
+                                </a>
+                            </div>    
+                        </form>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-{{/if}}
-  </body>
-
+</body> --}}
 </html>
