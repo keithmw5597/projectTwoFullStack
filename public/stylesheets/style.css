@@ -190,6 +190,12 @@ html{
     background-color: var(--secondaryTeal);
 }
 
+.logoutBtn{
+    background-color: var(--secondaryTeal);
+    color: var(--primaryTeal);
+    line-height:8px;
+}
+
 .mobile-nav .navbar-item {
     color: var(--lightGray);
 }
