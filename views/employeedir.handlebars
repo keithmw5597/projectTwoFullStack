@@ -51,12 +51,12 @@
                         <!--wrapped in a div so to apply a border around it--> --}}
                         <div class="table-container tableWrap is-fullwidth">
                             <table id="directory" class ="table is-fullwidth is-hoverable">
-                                <tbody class="is-fullwidth">
+                                <tbody id = "allEmployees" class="is-fullwidth">
                                     {{!-- <!--/////////////////////////////////////////////////////////////////-->
                                     <!--This information will be added dynamically, placeholders for now-->
                                     <!--leave this first row as sample--> --}}
                                     <tr id="index-1" class="t-row is-fullwidth">
-                                        <td id="selectDirRow" class="has-text-centered"><input type="checkbox"></td>
+                                        <td id="selectDirRow" class="has-text-centered"><input type="checkbox" id="select"></td>
                                         <td id="icon" class="has-text-centered"><img src="/img/profileicon.png" id="small_icon"></th>
                                         <td id="name" class="has-text-centered"><a href="/api/employeeprofile">Employee 1</a></td>
                                         <td id="email"class="has-text-centered">Employee1.lastName@company.com</td>
