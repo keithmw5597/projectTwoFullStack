@@ -330,6 +330,7 @@ table#directory td{
     display: flex;
     background-color: var(--secondaryTeal);
     overflow: hidden;
+    max-height: 250px;
     /* max-height: 250px;
     min-height: 250px; */
 }
@@ -341,9 +342,18 @@ table#directory td{
     min-height: 225px;
 }
 
+.nav-img1{
+    padding: 0%;
+    width: 40%;
+}
+
 .nav-img {
     background-image: url(/public/images/Asset2.png);
     background-size: auto;
+    height: 475px;
+    width: 100%;
+    overflow: hidden;
+    
     /* position: relative;
     top: -70px; */
 }
