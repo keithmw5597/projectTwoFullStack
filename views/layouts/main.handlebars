@@ -1,40 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
-
-  <head>
+<head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
     <title>Employee Aide</title>
-     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>
-          {{!-- <a href="/">Our Project App</a> --}}
-        </h1>
-        <nav>
-        {{#if loggedIn}}
-        <button id="logout"class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-      </header>
-      <main>
-        {{{body}}}
-      </main>
-      <footer>
-
-      </footer>
-    </div>
-    
-    <script src="/javascript/logout.js"></script>
-
-  </body>
-
+</head>
+{{!-- {{#if loggedIn}} --}}
+    {{{body}}}
+    <script src="/javascript/navbardropdown.js"></script>
+    <script src="/javascript/logout.js"
+</body>
 </html>
