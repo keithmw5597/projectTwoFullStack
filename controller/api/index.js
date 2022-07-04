@@ -1,12 +1,12 @@
 const router = require('express').Router();
 
-const departmentRoutes = require('./department-routes');
-const employeeRoutes = require('./employee-routes');
-const salaryRoutes = require('./salary-routes');
-const userRoutes = require('./user-routes');
+import departmentRoutes from './department-routes';
+import employeeRoutes from './employee-routes';
+import salaryRoutes from './salary-routes';
+import userRoutes from './user-routes';
 
-const addemployeeroutes = require("./addemployee-routes");
-const employeeprofileroutes = require("./employeeprofile");
+import addemployeeroutes from "./addemployee-routes";
+import employeeprofileroutes from "./employeeprofile";
 
 router.use('/departments', departmentRoutes);
 router.use('/employees', employeeRoutes);
@@ -15,4 +15,4 @@ router.use('/users', userRoutes);
 router.use('/addemployee', addemployeeroutes);
 router.use('/employeeprofile', employeeprofileroutes);
 
-module.exports = router;
+export default router;

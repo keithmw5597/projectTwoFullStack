@@ -1,11 +1,11 @@
 const router = require("express").Router();
-const Departments = require("../../models/Departments");
+import { findAll, findOne, create } from "../../models/Departments";
 
 // http://localhost:3001/api/departments/
 
 // get all users
 router.get("/", (req, res) => {
-  Departments.findAll({
+  findAll({
     attributes: { exclude: ["password"] },
   })
     .then((Department) =>
@@ -21,7 +21,7 @@ router.get("/", (req, res) => {
 
 // get one department
 router.get("/:id", (req, res) => {
-  Departments.findOne({
+  findOne({
     attributes: { exclude: ["password"] },
     where: {
       id: req.params.id,
@@ -42,7 +42,7 @@ router.get("/:id", (req, res) => {
 
 //add a department
 router.post("/add", (req, res) => {
-  Departments.create({
+  create({
     name: req.body.name,
     supervisor: req.body.supervisor,
   })
@@ -53,4 +53,4 @@ router.post("/add", (req, res) => {
     });
 });
 
-module.exports = router;
+export default router;

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+import { User } from '../../models';
 
 // User route ???
 
@@ -126,4 +126,4 @@ router.post('/logout',(req,res)=> {
 //     });
 // });
 
-module.exports = router;
+export default router;

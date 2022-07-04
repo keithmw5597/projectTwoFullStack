@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Employees = require("../../models/Employees");
+import { create } from "../../models/Employees";
 
 // http://localhost:3001/api/addemployee
 
@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-  Employees.create({
+  create({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     department: req.body.department,
@@ -24,4 +24,4 @@ router.post("/", (req, res) => {
 });
 
 
-module.exports = router;
+export default router;

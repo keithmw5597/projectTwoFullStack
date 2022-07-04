@@ -1,11 +1,11 @@
 const router = require("express").Router();
-const Salary = require("../../models/Salary");
+import { findAll, findOne, create } from "../../models/Salary";
 
 // http://localhost:3001/api/salaries/
 
 // get all users
 router.get("/", (req, res) => {
-  Salary.findAll({
+  findAll({
     attributes: { exclude: ["password"] },
   })
     .then((Salarys) =>
@@ -21,7 +21,7 @@ router.get("/", (req, res) => {
 
 // get one Salary
 router.get("/:id", (req, res) => {
-  Salary.findOne({
+  findOne({
     attributes: { exclude: ["password"] },
     where: {
       id: req.params.id,
@@ -42,7 +42,7 @@ router.get("/:id", (req, res) => {
 
 //add a Salary
 router.post("/add", (req, res) => {
-  Salary.create({
+  create({
     salary: req.body.salary,
     department_id: req.body.department_id,
   })
@@ -53,4 +53,4 @@ router.post("/add", (req, res) => {
     });
 });
 
-module.exports = router;
+export default router;

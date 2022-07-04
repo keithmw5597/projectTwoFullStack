@@ -6,4 +6,4 @@ router.get("/", (req, res) => {
   res.render("employeeprofile")
 });
 
-module.exports = router;
+export default router;
