@@ -8,10 +8,10 @@ router.get("/", (req, res) => {
 
 router.get('/', (req,res)=>{
   if (req.session.loggedIn){
-    res.redirect('/homepage');
+    res.redirect('homepage');
     return
   }
-  res.render('login')
+  res.render('homepage')
 })
 
 router.get('/homepage', (req,res)=>{
