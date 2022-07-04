@@ -1,0 +1,64 @@
+<body id="directoryPage" class="maxHt">
+    <div class="maxHt columns is-tablet is-centered p-0">
+        {{>employee-left-nav}}
+
+        <!--page information for the right column-->
+        <div id="right-content" class="maxHt column is-full-mobile mx-0 p-0">
+            <div class="is-fullwidth">
+                {{>top-nav}}
+
+                <!--information located on top of page, company name and page path-->
+                <section id="companyName" class="pt-2">
+                    <p id="titleName" class="title pl-6 pt-3 pb-2 is-size-3 has-text-weight-normal">Company name</p>
+                    <p id ="pagePath"class="subtitle py-1 pl-6 is-size-6">Employee Directory > Add Employee</p>
+                </section>
+                
+            <!--the part of the page where the content differs. -->
+            <section id="page-content" class = "container">
+
+                <!--**************************************-->
+                <!--START of KEITH'S SIGN UP PAGE CODE-->
+                <div class="container">
+                    <div class="column is-9 mx-auto">
+                        <div class="card py-5 px-6 mx-3" id="addEmployee">
+                            <form class="field px-5">
+                            
+                            <h2>Employee Information</h2>
+                            <form class="section p-1">
+                                <label class="label"></label>
+                                <div class="columns p-1">
+                                        <div class="column p-1">
+                                            <label class="label"></label>
+                                            <div class="control">
+                                                <input type="text" class="input info" id="fName" placeholder="First name">
+                                            </div>            
+                                        </div>
+                                        <div class="column p-1">
+                                            <label class="label"></label>
+                                            <div class="control">
+                                                <input type="text" class="input info" id="lName" placeholder="Last name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input info" type="text" id="department" placeholder="Department">
+                                </div>
+                                <label class="label"></label>
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input info" type="text" id="manager" placeholder="Email">
+                                </div>
+                                <div class="control">
+                                    <button class="button mt-3 is-fullwidth" id="continue">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- END OF KEITH'S SIGN UP PAGE CODE -->
+            </section>
+        </div>
+    </div>
+<script src="/javascript/addemployee.js"></script>
+</body>

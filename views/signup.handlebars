@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>Sign up</title>
+</head>
+<body>
+    <div class="bg-log-in">
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-one-quarter"></div>
+                    <div class="column is-one-quarter"></div>
+                    <div class="column mt-7 pt-6 pb-1" id="vert-cent">
+                        <div class="card mt-7 p-6" id="signUpCard">
+                            <h2 class="logIn">Account Information</h2>
+                            <form class="field">
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input type="text" class="input" id="email-signup"placeholder="email">
+                                </div>
+                                <div class="control">
+                                    <input type="text" class="input" id="username-signup"placeholder="username">
+                                </div>
+                                <div class="control mt-2">
+                                    <input id="password-signup"class="input" type="text" placeholder="password">
+                                    {{!-- <a class="button mt-2" id="button3" href="login">Create Account</a> --}}
+                                    <button class="button mt-2" id="button3">Create Account</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+      <script src="javascript/signup.js"></script>
+</body>
+</html>
