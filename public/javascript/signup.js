@@ -10,13 +10,17 @@ async function signupFormHandler(event) {
     if (username && email && password) {
       const response =  await fetch('/api/users/signup', {
         method: 'post',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           username,
           
           email,
           password
+<<<<<<< HEAD
         })
+=======
+        }),
+        headers: { 'Content-Type': 'application/json' }
+>>>>>>> parent of bbc9f69 (header fix)
       });
       console.log(response)
 
