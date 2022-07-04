@@ -17,13 +17,12 @@ async function signupFormHandler(event) {
           email,
           password
         }),
-        
       });
       console.log(response)
 
       //check the response status
       if(response.ok){
-        console.log('success')
+        // console.log('success');
         document.location.replace('/')
       }else{
         alert(response.statusText);
